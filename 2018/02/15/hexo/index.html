@@ -100,21 +100,21 @@
 
 
   
-  <meta name="keywords" content="hexo,github,themes,git,updating,wiki," />
+  <meta name="keywords" content="hexo,github,themes,git,updating," />
 
 
 <meta name="description" content="关于Hexo+Github Pages搭建本地博客, 部署到github上的一些常规步骤及基本设置.">
-<meta name="keywords" content="hexo,github,themes,git,updating,wiki">
+<meta name="keywords" content="hexo,github,themes,git,updating">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo, Github Pages, Git之旅">
+<meta property="og:title" content="Hexo+Github Pages+Git之旅">
 <meta property="og:url" content="http://logithm.github.io/2018/02/15/hexo/index.html">
 <meta property="og:site_name" content="Nogit">
 <meta property="og:description" content="关于Hexo+Github Pages搭建本地博客, 部署到github上的一些常规步骤及基本设置.">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://logithm.github.io/images/001.png">
-<meta property="og:updated_time" content="2018-03-05T23:50:13.247Z">
+<meta property="og:updated_time" content="2018-03-06T07:48:10.288Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo, Github Pages, Git之旅">
+<meta name="twitter:title" content="Hexo+Github Pages+Git之旅">
 <meta name="twitter:description" content="关于Hexo+Github Pages搭建本地博客, 部署到github上的一些常规步骤及基本设置.">
 <meta name="twitter:image" content="http://logithm.github.io/images/001.png">
 
@@ -132,7 +132,7 @@
     sidebar: "",
   };
 </script>
-  <title>Hexo, Github Pages, Git之旅 | Nogit</title>
+  <title>Hexo+Github Pages+Git之旅 | Nogit</title>
   
 
 
@@ -302,7 +302,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Hexo, Github Pages, Git之旅</h1>
+          <h1 class="post-title" itemprop="name headline">Hexo+Github Pages+Git之旅</h1>
         
 
         <div class="post-meta">
@@ -385,9 +385,11 @@
 <ul>
 <li>安装<a href="https://nodejs.org/" target="_blank" rel="noopener">node.js</a></li>
 <li>安装<a href="https://git-scm.com/" target="_blank" rel="noopener">git</a>, 勾选<code>Git Bash Here</code>.</li>
-<li>文本编辑器: 如notepad++, sublime text3, vim, emacs,... 甚至就用记事本就行了. 不过听说记事本有个问题, 涉及到utf8编码时最好不要用.<br>
-&gt; Microsoft开发记事本的团队使用了一个非常弱智的行为来保存UTF-8编码的文件，他们自作聪明地在每个文件开头添加了0xefbbbf（十六进制）的字符， 你会遇到很多不可思议的问题，比如，网页第一行可能会显示一个“?”，明明正确的程序一编译就报语法错误，等等，都是由记事本的弱智行为带来的。 <a href="https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/0013743256916071d599b3aed534aaab22a0db6c4e07fd0000" target="_blank" rel="noopener">出处</a></li>
+<li>文本编辑器: 如notepad++, sublime text3, vim, emacs,... 甚至就用记事本就行了. 不过听说记事本有个问题, 涉及到utf8编码时最好不要用.</li>
 </ul>
+<blockquote>
+<p>Microsoft开发记事本的团队使用了一个非常弱智的行为来保存UTF-8编码的文件，他们自作聪明地在每个文件开头添加了0xefbbbf（十六进制）的字符， 你会遇到很多不可思议的问题，比如，网页第一行可能会显示一个“?”，明明正确的程序一编译就报语法错误，等等，都是由记事本的弱智行为带来的。 <a href="https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/0013743256916071d599b3aed534aaab22a0db6c4e07fd0000" target="_blank" rel="noopener">出处</a></p>
+</blockquote>
 <h2 id="安装hexo">安装hexo</h2>
 <ol style="list-style-type: decimal">
 <li><p>在目录<code>C:\users\xyz\</code>的前提下, 安装hexo: <code>npm install hexo-cli -g</code> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo-cli代表 hexo commond line interface </span><br><span class="line">-g代表全局安装，这样可以直接在windows命令行运行</span><br><span class="line">不论在哪个目录下, 都会安装到C:\users\xyz\appdata\roaming\npm\目录下.</span><br></pre></td></tr></table></figure></p></li>
@@ -397,20 +399,24 @@
 <li><p><code>hexo server</code><br>
 至此, 在浏览器中打开<a href="http://localhost:4000/" class="uri" target="_blank" rel="noopener">http://localhost:4000/</a>. 成功的话就可以看到博客页面, 那么安装就算完成了.<br>
 另外, 其中的<code>blog</code>可以是多级目录, 以最后一个目录为准, 即大部分操作都在最后一个目录下进行. 与其如此, 不如切换<code>C:\users\xyz\</code>为好.<br>
-注: 以hexo.io为准. 在安装这一块, 写得很清楚.</p></li>
+注: 以hexo.io为准. 在安装这部分, 写得很清楚.</p></li>
 </ol>
 <h1 id="部署到github.io上">部署到github.io上</h1>
-<p>假定本地用户名为<code>xyz</code>, github的用户名为<code>xyzio</code>, 注册邮箱为 <code>xyzio@gmail.com</code>. 1. <code>npm install hexo-deployer-git --save</code><br>
-2. 不妨记<a href="https://github.com" target="_blank" rel="noopener">github</a>的用户名为<code>xyzio</code>, 注册邮箱为 <code>xyzio@gmail.com</code> 3. 在<a href="https://github.com" target="_blank" rel="noopener">github</a>中, 点击<code>New resository</code>, 新建新仓库, 名为: <code>xyzio.github.io</code>. 名字只能如此. 4. 在<code>C:\users\xyz\blog\_config.yml</code>文件中, 添加: <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repository: https://github.com/xyzio/xyzio.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure></p>
-<pre><code>等价写法:</code></pre>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repository:</span><br><span class="line">    github: git@github.com:xyzio/xyzio.github.io.git,master</span><br><span class="line">    coding: git@git.coding.net:xyzcode/xyzcode.git,master 	# coding是另一类似github的服务.</span><br></pre></td></tr></table></figure>
+<p>假定本地用户名为<code>xyz</code>, github的用户名为<code>xyzio</code>, 注册邮箱为 <code>xyzio@gmail.com</code>.</p>
+<ol style="list-style-type: decimal">
+<li><code>npm install hexo-deployer-git --save</code><br>
+</li>
+<li>不妨记<a href="https://github.com" target="_blank" rel="noopener">github</a>的用户名为<code>xyzio</code>, 注册邮箱为 <code>xyzio@gmail.com</code></li>
+<li>在<a href="https://github.com" target="_blank" rel="noopener">github</a>中, 点击<code>New resository</code>, 新建新仓库, 名为: <code>xyzio.github.io</code>. 名字只能如此.</li>
+<li><p>在<code>C:\users\xyz\blog\_config.yml</code>文件中, 添加: <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repository: https://github.com/xyzio/xyzio.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure></p>
+<p>等价写法: <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repository:</span><br><span class="line">    github: git@github.com:xyzio/xyzio.github.io.git,master</span><br><span class="line">    coding: git@git.coding.net:xyzcode/xyzcode.git,master 	# coding是另一类似github的服务.</span><br></pre></td></tr></table></figure></p></li>
+</ol>
 <h2 id="关于ssh-key-使用git的前提参考">关于ssh key: 使用Git的前提(<a href="http://beiyuu.com/github-pages" target="_blank" rel="noopener">参考</a>)</h2>
 <ol style="list-style-type: decimal">
-<li><p>在dos下<br>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-keygen -t rsa -C &quot;xyzio@gmail.com&quot;  </span><br><span class="line">Generating public/private rsa key pair.  </span><br><span class="line">Enter file in which to save the key (/Users/your_user_directory/.ssh/id_rsa):&lt;回车就好&gt;</span><br></pre></td></tr></table></figure></p>
+<li><p>在dos下 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-keygen -t rsa -C &quot;xyzio@gmail.com&quot;  </span><br><span class="line">Generating public/private rsa key pair.  </span><br><span class="line">Enter file in which to save the key (/Users/your_user_directory/.ssh/id_rsa):&lt;回车就好&gt;</span><br></pre></td></tr></table></figure></p>
 <p>然后系统会要你输入加密串（Passphrase）:<br>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Enter passphrase (empty for no passphrase):&lt;输入加密串&gt;  </span><br><span class="line">Enter same passphrase again:&lt;再次输入加密串&gt;</span><br></pre></td></tr></table></figure></p>
-如果成功, 会在dos下有反馈, 一眼就明白成功了.</li>
+<p>如果成功, 会在dos下有反馈, 一眼就明白成功了.</p></li>
 <li>添加ssh key到 GitHub:
 <ol style="list-style-type: decimal">
 <li>切换到<code>C:\users\xyz\.ssh</code>, 文本编辑器打开文件<code>id_rsa.pub</code>, 复制内容.</li>
@@ -488,31 +494,10 @@ Git会根据用户的名字和邮箱来记录提交, GitHub也是用这些信息
 </ol></li>
 <li>下划线: 文本与公式之间有矛盾. 方法一: <a href="http://kubicode.me/2016/03/16/Hexo/Fix-Hexo-Bug-In-Mathjax/" target="_blank" rel="noopener">修改js</a>. 方法二: <a href="">替换markdown渲染</a></li>
 </ol>
-<h1 id="next主题的设置看官网最好">NeXT主题的设置(看<a href="http://theme-next.iissnan.com/" target="_blank" rel="noopener">官网</a>最好)</h1>
-<ol style="list-style-type: decimal">
-<li><a href="https://www.jianshu.com/p/efbeddc5eb19" target="_blank" rel="noopener">基本设置</a> 的<a href="http://www.dragonstyle.win/2017/11/07/Hexo-Next主题优化/" target="_blank" rel="noopener">作者</a>, <a href="http://blog.csdn.net/qq_33699981/article/details/72716951" target="_blank" rel="noopener">这里是出处</a><br>
-</li>
-<li><p><a href="https://maoyanting.github.io/2018/02/07/hexo-NexT%E7%9A%84%E4%BC%98%E5%8C%96/" target="_blank" rel="noopener">进一步修改</a>, <a href="https://reuixiy.github.io/technology/computer/computer-aided-art/2017/06/09/hexo-next-optimization.html" target="_blank" rel="noopener">这个很详细</a>, <a href="https://qianling.pw/hexo-optimization/" target="_blank" rel="noopener">这个也很好</a> , <a href="https://zhuzhuyule.com/archives/" target="_blank" rel="noopener">高级设置</a>, <a href="http://cxjiang.top/2017/04/07/Hexo-NexT/" target="_blank" rel="noopener">也不错</a>, <a href="http://www.lazyboy.site/2017/Next%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A0%B7%E5%BC%8F/" target="_blank" rel="noopener">一些颜色设置</a>,</p></li>
-<li><p>关于换行: <a href="https://github.com/iissnan/hexo-theme-next/issues/1672" target="_blank" rel="noopener">文本编辑器中换行, html中不换行</a> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">marked:</span><br><span class="line">  gfm: true</span><br><span class="line">  pedantic: false</span><br><span class="line">  sanitize: false</span><br><span class="line">  tables: true</span><br><span class="line">  breaks: false # 此为关键</span><br><span class="line">  smartLists: true</span><br><span class="line">  smartypants: true</span><br><span class="line">  modifyAnchors: &apos;&apos;</span><br><span class="line">  autolink: true</span><br></pre></td></tr></table></figure></p></li>
-<li><a href="https://github.com/iissnan/hexo-theme-next/issues/1250" target="_blank" rel="noopener">修改文章之间的间距</a></li>
-<li><p><a href="https://www.zhihu.com/question/49405680" target="_blank" rel="noopener">修改字体与颜色</a>: <code>next\source\css\_variable\base.styl</code></p></li>
-</ol>
 <h1 id="插件">插件</h1>
 <ol style="list-style-type: decimal">
 <li>安装: <code>npm install xxx  --save</code>, 卸载: <code>npm uninstall xxx</code>.</li>
 <li>安装也可以用git clone来处理, 放到 <code>\blog\node_modules\</code> 下.</li>
-</ol>
-<h2 id="已安装的插件">已安装的插件</h2>
-<ol style="list-style-type: decimal">
-<li><a href="https://github.com/mythsman/hexo-douban" target="_blank" rel="noopener">hexo-douban</a>: 生成book/movie/game这几项, 没有music. 另外加载该插件时, <code>hexo g</code>速度慢.(已卸载)</li>
-<li>hexo-math:
-<ul>
-<li><p><code>_config.yml</code>的修改:</p></li>
-<li>需要<a href="http://kubicode.me/2016/03/16/Hexo/Fix-Hexo-Bug-In-Mathjax/" target="_blank" rel="noopener">把转义符修改</a> <a href="http://masikkk.com/article/hexo-13-MathJax/" target="_blank" rel="noopener">另一佐证</a>, 问题出在下划线<code>_</code>的多义: 文本的强调与公式的下标.<br>
-注: 是 <code>node_modules/marked/lib/marked.js</code>, 不是 <code>hexo-renderer-marked</code> .</li>
-</ul></li>
-<li>hexo-heading-index: 标题编号.</li>
-<li>hexo-browsersync: 本地修改自动刷新.(可能会导致markdown的渲染出问题, 估计是引号个数的事情. 与代码引用格式有关.)(已卸载)</li>
 </ol>
 <h1 id="搭建wiki">搭建wiki</h1>
 <p>本地/远程 wiki 有多种方式, 在github.com的前提下, 当然是比较好. 但是永远有不确定的因素存在, 什么时候就关闭了, 什么时候就访问不了.</p>
@@ -557,8 +542,6 @@ Git会根据用户的名字和邮箱来记录提交, GitHub也是用这些信息
             <a href="/tags/git/" rel="tag"># git</a>
           
             <a href="/tags/updating/" rel="tag"># updating</a>
-          
-            <a href="/tags/wiki/" rel="tag"># wiki</a>
           
         </div>
       
@@ -786,7 +769,7 @@ Git会根据用户的名字和邮箱来记录提交, GitHub也是用这些信息
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#hexo的安装"><span class="nav-number">1.</span> <span class="nav-text">Hexo的安装</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#准备工作-系统环境"><span class="nav-number">1.1.</span> <span class="nav-text">准备工作: 系统环境</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装hexo"><span class="nav-number">1.2.</span> <span class="nav-text">安装hexo</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#部署到github.io上"><span class="nav-number">2.</span> <span class="nav-text">部署到github.io上</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#关于ssh-key-使用git的前提参考"><span class="nav-number">2.1.</span> <span class="nav-text">关于ssh key: 使用Git的前提(参考)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git-clone"><span class="nav-number">2.2.</span> <span class="nav-text">git clone</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#git的基本常识"><span class="nav-number">2.2.1.</span> <span class="nav-text">git的基本常识</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#利用git命令进行部署"><span class="nav-number">2.2.2.</span> <span class="nav-text">利用git命令进行部署</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#日常使用hexo的常规流程"><span class="nav-number">3.</span> <span class="nav-text">日常使用hexo的常规流程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#常用命令"><span class="nav-number">3.1.</span> <span class="nav-text">常用命令</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#faq"><span class="nav-number">4.</span> <span class="nav-text">FAQ</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#next主题的设置看官网最好"><span class="nav-number">5.</span> <span class="nav-text">NeXT主题的设置(看官网最好)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#插件"><span class="nav-number">6.</span> <span class="nav-text">插件</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#已安装的插件"><span class="nav-number">6.1.</span> <span class="nav-text">已安装的插件</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#搭建wiki"><span class="nav-number">7.</span> <span class="nav-text">搭建wiki</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#一些好玩的-期待自己有进一步的改进"><span class="nav-number">8.</span> <span class="nav-text">一些好玩的, 期待自己有进一步的改进</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考"><span class="nav-number">9.</span> <span class="nav-text">参考</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#hexo的安装"><span class="nav-number">1.</span> <span class="nav-text">Hexo的安装</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#准备工作-系统环境"><span class="nav-number">1.1.</span> <span class="nav-text">准备工作: 系统环境</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装hexo"><span class="nav-number">1.2.</span> <span class="nav-text">安装hexo</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#部署到github.io上"><span class="nav-number">2.</span> <span class="nav-text">部署到github.io上</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#关于ssh-key-使用git的前提参考"><span class="nav-number">2.1.</span> <span class="nav-text">关于ssh key: 使用Git的前提(参考)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git-clone"><span class="nav-number">2.2.</span> <span class="nav-text">git clone</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#git的基本常识"><span class="nav-number">2.2.1.</span> <span class="nav-text">git的基本常识</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#利用git命令进行部署"><span class="nav-number">2.2.2.</span> <span class="nav-text">利用git命令进行部署</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#日常使用hexo的常规流程"><span class="nav-number">3.</span> <span class="nav-text">日常使用hexo的常规流程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#常用命令"><span class="nav-number">3.1.</span> <span class="nav-text">常用命令</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#faq"><span class="nav-number">4.</span> <span class="nav-text">FAQ</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#插件"><span class="nav-number">5.</span> <span class="nav-text">插件</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#搭建wiki"><span class="nav-number">6.</span> <span class="nav-text">搭建wiki</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#一些好玩的-期待自己有进一步的改进"><span class="nav-number">7.</span> <span class="nav-text">一些好玩的, 期待自己有进一步的改进</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考"><span class="nav-number">8.</span> <span class="nav-text">参考</span></a></li></ol></div>
             
 
           </div>
@@ -828,7 +811,7 @@ Git会根据用户的名字和邮箱来记录提交, GitHub也是用这些信息
 
 
 
-  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/theme-next/hexo-theme-next">NexT.Mist</a></div>
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/theme-next/hexo-theme-next">NexT.Mist</a> v6.0.5</div>
 
 
 
