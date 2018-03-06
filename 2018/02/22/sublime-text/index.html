@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-CN">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=6.0.5" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.0.5">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.0.5">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.0.5">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.0.5" color="#222">
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '6.0.5',
+    sidebar: {"position":"left","display":"hide","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  
+  <meta name="keywords" content="updating,package,sublime," />
+
+
+<meta name="description" content="sublime text 3是个轻量级的文本工具, 功能强大在插件上.">
+<meta name="keywords" content="updating,package,sublime">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Sublime Text 3 笔记">
+<meta property="og:url" content="http://logithm.github.io/2018/02/22/sublime-text/index.html">
+<meta property="og:site_name" content="Nogit">
+<meta property="og:description" content="sublime text 3是个轻量级的文本工具, 功能强大在插件上.">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-02-24T06:19:58.672Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Sublime Text 3 笔记">
+<meta name="twitter:description" content="sublime text 3是个轻量级的文本工具, 功能强大在插件上.">
+
+
+
+
+
+
+  <link rel="canonical" href="http://logithm.github.io/2018/02/22/sublime-text/"/>
+
+
+
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+  <title>Sublime Text 3 笔记 | Nogit</title>
+  
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"> <div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Nogit</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">有无之间</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页</a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档</a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            <i class="menu-item-icon fa fa-fw fa-th"></i> <br />分类</a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签</a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            <i class="menu-item-icon fa fa-fw fa-user"></i> <br />关于</a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+  
+
+
+
+ </div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://logithm.github.io/2018/02/22/sublime-text/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="LOG">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Nogit">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Sublime Text 3 笔记</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-22T08:53:33+08:00">2018-02-22</time>
+            
+
+            
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/工具/" itemprop="url" rel="index"><span itemprop="name">工具</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item-icon"
+            >
+            <i class="fa fa-eye"></i>
+             阅读次数： 
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
+
+          
+
+          
+              <div class="post-description">sublime text 3是个轻量级的文本工具, 功能强大在插件上.</div>
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>插件(plugins), snippets, 宏(macros).</p>
+<h1 id="基本情况">基本情况</h1>
+<h2 id="安装与破解">安装与破解</h2>
+<ul>
+<li><a href="https://www.sublimetext.com/3" target="_blank" rel="noopener">官网</a>下载,当前版本3143, 然后输入<a href="http://www.jianshu.com/p/04e1b65dd2c0" target="_blank" rel="noopener">注册码</a>. 貌似版本不一致也没关系, 至少还没报错.</li>
+<li><a href="https://packagecontrol.io/installation" target="_blank" rel="noopener">安装本地的package control</a>: 调出控制台, copy, paste.</li>
+</ul>
+<h2 id="settings">settings</h2>
+<ul>
+<li>当前配置都是在 <code>menu-&gt;preferences-&gt;setting-user</code> 下进行修改的. 这样的话就不影响全局的设置. <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">// 当前行高亮</span><br><span class="line">&quot;highlight_line&quot;: true,</span><br><span class="line"></span><br><span class="line">// 窗口失焦立即保存文件</span><br><span class="line">&quot;save_on_focus_lost&quot;: true,    </span><br><span class="line"></span><br><span class="line">// 关闭自动更新</span><br><span class="line">&quot;update_check&quot;: false,</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h1 id="快捷键">快捷键</h1>
+<ul>
+<li>调出控制台(console), 即底部的命令行: Ctrl+`. 其中`与~是同一个键, 即左单引号.</li>
+<li>打开悬浮对话框(command palette): ctrl+shift+p.</li>
+<li><p>ctrl+shift+l: 多行编辑</p></li>
+<li><p>这里设置按Ctrl+Shift+C复制文件路径，按F2即可在Chrome浏览器预览效果(如果需要的话，也可以根据自己的需要为Firefox，Safari，IE，Opera等加上)， 当然你也可以自己定义喜欢的快捷键，最后注意代码中的浏览器路径要以自己电脑里的文件路径为准。<br>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">[   </span><br><span class="line">&#123; &quot;keys&quot;: [&quot;ctrl+shift+c&quot;], &quot;command&quot;: &quot;copy_path&quot; &#125;,</span><br><span class="line">//chrome</span><br><span class="line">&#123; &quot;keys&quot;: [&quot;f2&quot;], &quot;command&quot;: &quot;side_bar_files_open_with&quot;,</span><br><span class="line">        &quot;args&quot;: &#123;</span><br><span class="line">            &quot;paths&quot;: [],</span><br><span class="line">            &quot;application&quot;: &quot;C:\\Users\\jeffj\\AppData\\Local\\Google\\Chrome\\Application\\chrome.exe&quot;,</span><br><span class="line">            &quot;extensions&quot;:&quot;.*&quot;</span><br><span class="line">        &#125;</span><br><span class="line">&#125;</span><br><span class="line">]</span><br></pre></td></tr></table></figure></p></li>
+<li><p><a href="https://ruby-china.org/topics/4824" target="_blank" rel="noopener">跳出括号</a></p></li>
+</ul>
+<h2 id="文档编辑快捷键">文档编辑快捷键</h2>
+<ul>
+<li><p>C+M: 快速移动光标到括号开始或结束</p></li>
+<li>一些参考</li>
+</ul>
+<ol style="list-style-type: decimal">
+<li><a href="http://www.imooc.com/article/3810" target="_blank" rel="noopener">如何优雅地使用 Sublime Text 3</a></li>
+<li><a href="http://blog.csdn.net/article/details?id=31791881" target="_blank" rel="noopener">Sublime Text 3快捷键汇总</a></li>
+</ol>
+<h1 id="插件">插件</h1>
+<h2 id="基础">基础</h2>
+<ol style="list-style-type: decimal">
+<li>插件管理 <a href="https://packagecontrol.io/installation" target="_blank" rel="noopener">package control</a> 的安装: 其实就是把相应的代码copy到控制台(console)中, 然后回车等待 安装结束, 重启即可.</li>
+<li>至于某插件到底做什么用, 看<a href="https://packagecontrol.io/" target="_blank" rel="noopener">插件官网</a>是最简单的.</li>
+<li>插件的安装方法:
+<ul>
+<li>已经安装package control的前提下, c+s+p调出悬浮对话框, 找到package install, 再找到想要的插件, 回车即可.</li>
+<li>下载完整的插件包, 解压, 放入<code>%APPDATA%\Sublime Text 3\Packages</code> ,<br>
+即 <code>C:\Users\yao\AppData\Roaming\Sublime Text 3\Packages</code>．</li>
+</ul></li>
+</ol>
+<h2 id="通用插件">通用插件:</h2>
+<ol style="list-style-type: decimal">
+<li>converttoutf8: 将非utf8的编码转为utf8编码.</li>
+<li>BracketHighlighter: 高亮显示匹配的括号、引号和标签.</li>
+<li><a href="http://www.jeffjade.com/2015/12/15/2015-04-17-toss-sublime-text/" target="_blank" rel="noopener">SideBarEnhancements</a>: 更强大的是，该插件还能让我们自定义快捷 键呼出某个浏览器以预览页面！</li>
+</ol>
+<h2 id="个性化插件">个性化插件</h2>
+<ol style="list-style-type: decimal">
+<li>color theme
+<ul>
+<li>语法高亮其实就是一个color theme, 这个东西可以自己写, 放入(C:Text 3), 比如这 个目录下的<a href="http://riny.net/2013/sublime-markdown/" target="_blank" rel="noopener">Monokai-custom.tmTheme</a> 就是个例子, 但是这个theme有问题.</li>
+<li>各个color theme所支持的语言集合不一致, 至于需要某theme支持某语言, 这个应该可以在menu-&gt;preferences-&gt;settings-user中设定.</li>
+</ul></li>
+<li><a href="http://jinfang.life/posts/4fb342fc/" target="_blank" rel="noopener">git</a></li>
+</ol>
+<h2 id="在sublime3中使用latex">在sublime3中使用latex</h2>
+<ol style="list-style-type: decimal">
+<li><p>最最重要的是pdflatex中的编码问题, 看来要把所有tex文件都转换为utf8(不带bom)了, 否则即使有convert2utf8宏包仍然会一不注意就乱码了.</p></li>
+<li><p><a href="https://packagecontrol.io/packages/LaTeXing" target="_blank" rel="noopener">LaTeXing</a> 貌似功能强大.</p></li>
+<li><p>竟然有<a href="https://packagecontrol.io/packages/TikZ" target="_blank" rel="noopener">TikZ</a>. <a href="http://dz.sdut.edu.cn/blog/subaochen/2016/02/sublime-text-3%E7%9A%84%E4%B8%80%E4%BA%9B%E4%BD%BF%E7%94%A8%E7%BB%8F%E9%AA%8C/" target="_blank" rel="noopener">例子1</a>, <a href="http://docs.latexing.com/stable/tutorials/tikz-with-latexing.html" target="_blank" rel="noopener">例子2</a>,</p></li>
+<li><p><a href="https://packagecontrol.io/packages/LaTeXTools" target="_blank" rel="noopener">LaTeXtools</a> 看起来比<a href="https://packagecontrol.io/packages/LaTeXing" target="_blank" rel="noopener">LaTeXing</a>强大.</p></li>
+<li><p><a href="https://www.geogebra.org/" target="_blank" rel="noopener">geogebra可以导出tikz</a></p></li>
+<li><p><a href="https://www.ctan.org/tex-archive/macros/latex/contrib/easy-todo" target="_blank" rel="noopener">easy-todo宏包</a></p></li>
+<li><p><a href="https://www.ctan.org/pkg/todonotes" target="_blank" rel="noopener">todonotes宏包</a></p></li>
+<li><p><a href="https://www.ctan.org/pkg/diagxy" target="_blank" rel="noopener">diagxy宏包</a>: 图论.</p></li>
+<li><p><a href="https://www.ctan.org/pkg/multido" target="_blank" rel="noopener">multido宏包</a>: 在某处重复/有规律地输入内容. <code>\multido{\i=2+-3}{10}{\i, }</code></p></li>
+<li><p><a href="https://www.ctan.org/tex-archive/graphics/pstricks/contrib/" target="_blank" rel="noopener">pstricks下有很多实现不同功能的子宏包</a></p></li>
+<li><a href="http://blog.yuelong.info/post/st-latextools-readme-1.html" target="_blank" rel="noopener">LaTeXTools 插件教程</a></li>
+<li><a href="http://liam0205.me/tags/LaTeXTools/" title="LaTeXTools编译命令重新" target="_blank" rel="noopener">订制 Sublime Text 下 LaTeXTools 插件的编译脚本</a></li>
+<li><a href="http://liam0205.me/2014/12/14/advanced-builder-latextools/" target="_blank" rel="noopener">LaTeXTools 各种编译器的重新设置</a> 这篇文档非常重要. 然而并没有什么鸟用.</li>
+<li><p><a href="http://isunnydays.lofter.com/post/260ea5_8b9a2a" target="_blank" rel="noopener">关于Sumatra的反向搜索设置</a></p></li>
+</ol>
+<blockquote>
+<p>打开SumetraPDF选项，修改命令行为：&quot;D:Text 3_text.exe&quot; &quot;%f:%l&quot; 或者&quot;C:FilesText 3_text.exe&quot; &quot;%f:%l&quot; 注意路径按照自己的安装的盘符进行对应修改； window下用ctex一般SumetraPDF是和WinEdt关联的，其原始命令为：&quot;D:.exe&quot; &quot;[Open(|%f|);SelPar(%l,8);]&quot; 如果有一天想改回去，可用使用这个恢复和WinEdt的反向搜索。</p>
+</blockquote>
+<ol style="list-style-type: decimal">
+<li><a href="https://github.com/LaTeXing/LaTeX-cwl" target="_blank" rel="noopener">LaTeX-cwl</a> 用于代码补齐, 需要和latexing配合使用. 离线安装比较好, 然后修改latex-cwl中的各个文件. latex-cwl 文件夹中很多cwl文件对我来说并没有用, 直接删除, 甚至可以自己写一个需要的代码补全与提示列表, 只用后缀是cwl, 内容是类似的列表即可.</li>
+<li>神奇的latexing. 若disabled latexing宏包, 会导致latextools的C-S-B快捷键对应的编译命令失效.</li>
+</ol>
+<h1 id="参考">参考</h1>
+<ol style="list-style-type: decimal">
+<li><a href="http://www.cnblogs.com/wind128/p/4409422.html" target="_blank" rel="noopener">Sublime Text 3 全程详细图文原创教程</a>. ps: 该文有相当多的newbie信息.</li>
+<li><a href="https://www.zybuluo.com/king/note/47271" target="_blank" rel="noopener">Sublime Text 3 配置和使用方法</a></li>
+</ol>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/updating/" rel="tag"># updating</a>
+          
+            <a href="/tags/package/" rel="tag"># package</a>
+          
+            <a href="/tags/sublime/" rel="tag"># sublime</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/02/21/of-pandoc/" rel="next" title="pandoc笔记">
+                <i class="fa fa-chevron-left"></i> pandoc笔记
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/02/22/my-latex-tips/" rel="prev" title="LaTeX 笔记">
+                LaTeX 笔记 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">LOG</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">18</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">3</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">28</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  <a href="https://github.com/logithm" target="_blank" title="GitHub"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                  
+                </span>
+              
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#基本情况"><span class="nav-number">1.</span> <span class="nav-text">基本情况</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装与破解"><span class="nav-number">1.1.</span> <span class="nav-text">安装与破解</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#settings"><span class="nav-number">1.2.</span> <span class="nav-text">settings</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#快捷键"><span class="nav-number">2.</span> <span class="nav-text">快捷键</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#文档编辑快捷键"><span class="nav-number">2.1.</span> <span class="nav-text">文档编辑快捷键</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#插件"><span class="nav-number">3.</span> <span class="nav-text">插件</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#基础"><span class="nav-number">3.1.</span> <span class="nav-text">基础</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#通用插件"><span class="nav-number">3.2.</span> <span class="nav-text">通用插件:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#个性化插件"><span class="nav-number">3.3.</span> <span class="nav-text">个性化插件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#在sublime3中使用latex"><span class="nav-number">3.4.</span> <span class="nav-text">在sublime3中使用latex</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考"><span class="nav-number">4.</span> <span class="nav-text">参考</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">LOG</span>
+
+  
+
+  
+</div>
+
+
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/theme-next/hexo-theme-next">NexT.Mist</a></div>
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv" title="总访客量">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+    </span>
+  
+
+  
+    <span class="site-pv" title="总访问量">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.0.5"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.0.5"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.0.5"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.0.5"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.0.5"></script>
+
+
+
+  
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+
+  
+
+
+  
+  
+
+  
+  
+  
+  <script src="/lib/pangu/dist/pangu.min.js?v=3.3"></script>
+  <script type="text/javascript">pangu.spacingPage();</script>
+
+
+  
+
+  
+
+  
+
+</body>
+</html>

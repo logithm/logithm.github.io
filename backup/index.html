@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-CN">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=6.0.5" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.0.5">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.0.5">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.0.5">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.0.5" color="#222">
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '6.0.5',
+    sidebar: {"position":"left","display":"hide","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  
+  <meta name="keywords" content="maths, latex" />
+
+
+<meta name="description" content="实时监测文件的变化(livereload)   $ npm install hexo-livereload --save 安装livereload的浏览器插件 ps: 没成功.   hexo-toc可行 freemind主题修改post的标题大小在 themes\freemind\source\css\style.ss中 今天比较兴奋的是通过wixo/freemind这两个">
+<meta property="og:type" content="website">
+<meta property="og:title" content="乱七八糟">
+<meta property="og:url" content="http://logithm.github.io/backup/index.html">
+<meta property="og:site_name" content="Nogit">
+<meta property="og:description" content="实时监测文件的变化(livereload)   $ npm install hexo-livereload --save 安装livereload的浏览器插件 ps: 没成功.   hexo-toc可行 freemind主题修改post的标题大小在 themes\freemind\source\css\style.ss中 今天比较兴奋的是通过wixo/freemind这两个">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://logithm.github.io/images/m1.png">
+<meta property="og:image" content="http://logithm.github.io/images/m1.png">
+<meta property="og:image" content="http://logithm.github.io/images/geogebra001.png">
+<meta property="og:updated_time" content="2018-03-05T23:40:05.881Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="乱七八糟">
+<meta name="twitter:description" content="实时监测文件的变化(livereload)   $ npm install hexo-livereload --save 安装livereload的浏览器插件 ps: 没成功.   hexo-toc可行 freemind主题修改post的标题大小在 themes\freemind\source\css\style.ss中 今天比较兴奋的是通过wixo/freemind这两个">
+<meta name="twitter:image" content="http://logithm.github.io/images/m1.png">
+
+
+
+
+
+
+  <link rel="canonical" href="http://logithm.github.io/backup/"/>
+
+
+
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+  <title>乱七八糟 | Nogit</title>
+  
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"> <div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Nogit</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">有无之间</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页</a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档</a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            <i class="menu-item-icon fa fa-fw fa-th"></i> <br />分类</a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签</a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            <i class="menu-item-icon fa fa-fw fa-user"></i> <br />关于</a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+  
+
+
+
+ </div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+    
+    
+    <div class="post-block page">
+      <header class="post-header">
+
+<h1 class="post-title" itemprop="name headline">乱七八糟</h1>
+
+<div class="post-meta">
+  
+  
+
+
+
+</div>
+
+</header>
+
+      
+      
+      
+      <div class="post-body">
+        
+        
+          <ol style="list-style-type: decimal">
+<li><a href="http://www.hahack.com/codes/livereload-for-hexo/" target="_blank" rel="noopener">实时监测文件的变化(livereload)</a></li>
+</ol>
+<ul>
+<li><code>$ npm install hexo-livereload --save</code></li>
+<li><p>安装livereload的<a href="http://livereload.com/extensions/" target="_blank" rel="noopener">浏览器插件</a></p>
+<p>ps: 没成功.</p></li>
+</ul>
+<ol style="list-style-type: decimal">
+<li><p><a href="https://github.com/bubkoo/hexo-toc" target="_blank" rel="noopener">hexo-toc</a>可行</p></li>
+<li><p>freemind主题修改post的标题大小在 <code>themes\freemind\source\css\style.ss</code>中</p></li>
+<li><p>今天比较兴奋的是通过wixo/freemind这两个主题, 发现几个好玩的博客. 2018-02-27</p></li>
+<li><p>人生能有几回搏啊, 自己喜欢的事情是做些文字工作, 比如coding, 要是早点能发现自己的喜好并且能为之一直投入的话, 是多么幸福的事情. 2018-02-27</p></li>
+<li></li>
+</ol>
+<h1 id="备忘录">备忘录</h1>
+<p>from github(mymd/memo)</p>
+<ol start="3" style="list-style-type: decimal">
+<li><p><a href="http://bbs.ctex.org/forum.php?mod=viewthread&amp;tid=65541" target="_blank" rel="noopener">反复引用同一个脚注</a></p></li>
+<li><p><a href="https://segmentfault.com/q/1010000003846721" target="_blank" rel="noopener">通过css弄一个按钮</a></p></li>
+<li><p><a href="http://mixu.net/markdown-styles/" target="_blank" rel="noopener">markdown的一种实现形式</a> (便于切换css主题,可以生成目录,ubuntu下已实现,看首页说明即可.) 猜windows下也是可以的, 因为npm安装啊.(ps:的确可以.2017-10-12) windows下: C:</p></li>
+<li><p><a href="https://zh.fonts2u.com/" target="_blank" rel="noopener">可以把一整个font-family都下载下来</a></p></li>
+<li><p><a href="http://www.larrycaiyu.com/" target="_blank" rel="noopener">font-family</a>: master.css <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line">  <span class="attribute">font-family</span>: Rockwell, Verdana, sans-serif;</span><br><span class="line">  <span class="attribute">letter-spacing</span>: <span class="number">0em</span>;</span><br><span class="line">  <span class="attribute">background</span>: <span class="number">#fff</span> <span class="built_in">url</span>(/images/header_bg.gif) repeat-x top;</span><br><span class="line">  <span class="attribute">color</span>: <span class="number">#353B40</span>;</span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">font-size</span>: <span class="number">1.1em</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p></li>
+<li><p>markdown, wiki, 可以在latex中直接使用, 已经有相应的宏包了. 可能需要pdflatex. (latexstudio中的莲枝)</p></li>
+<li><p><a href="1-1.tex">wrapfig宏包可以实现左右排版</a>: 但是不能与列表环境互相嵌入. <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">\begin&#123;wrapfigure&#125;[12]&#123;r&#125;[34pt]&#123;5cm&#125;</span><br><span class="line">\begin&#123;tikzpicture&#125;</span><br><span class="line">....</span><br><span class="line">\end&#123;tikzpicture&#125;</span><br><span class="line">\end&#123;wrapfigure&#125;</span><br><span class="line">``` </span><br><span class="line"></span><br><span class="line">10. [zhlipsum 随机填充汉字](https://github.com/Stone-Zeng/zhlipsum)</span><br><span class="line"></span><br><span class="line">11. tikzlog-1405.pdf: xyz轴指向的自定义(P18)</span><br><span class="line">```latex</span><br><span class="line">\begin&#123;tikzpicture&#125;[x=&#123;(-.1cm,-.15cm)&#125;,y=&#123;(1cm,0cm)&#125;,z=&#123;(0cm,1cm)&#125;]</span><br><span class="line">\draw[-&gt;] (-5,0,0) -- (5,0,0) node[below] &#123;$x$&#125;;</span><br><span class="line">\draw[-&gt;] (0,-2,0) -- (0,2,0) node[right] &#123;$y$&#125;;</span><br><span class="line">\draw[-&gt;] (0,0,-1) -- (0,0,3) node[above] &#123;$z$&#125;;</span><br><span class="line">\draw[color=red] plot[domain=0:2*pi] (&#123;sin(\x r)&#125;,&#123;cos(\x r)&#125;,2);</span><br><span class="line">\draw[color=red] (0,0,0) -- (0,1,2) (0,0,0) -- (0,-1,2);</span><br><span class="line">\end&#123;tikzpicture&#125;</span><br></pre></td></tr></table></figure></p></li>
+<li><p><a href="http://www.latexstudio.net/archives/10645" target="_blank" rel="noopener">跨页表格/代码框</a> 还不错的book类</p></li>
+<li><p><a href="http://www.latexstudio.net/archives/10627" target="_blank" rel="noopener">开源微积分巨著《APEX Calculus》</a> <a href="https://github.com/APEXCalculus/APEXCalculus_Source" target="_blank" rel="noopener">latex排版</a></p></li>
+<li><p>---<a href="https://9iphp.com/web/html/sublime-text-3-license-key.html" target="_blank" rel="noopener">st3</a>--- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">—– BEGIN LICENSE —–</span><br><span class="line">Morin</span><br><span class="line">2 User License</span><br><span class="line">EA7E-924018</span><br><span class="line">184B9FDB 02612F57 33B15E69 BBC567F1</span><br><span class="line">E20FA231 C077EA95 CC14B48B 71DD2536</span><br><span class="line">E209843A 94D13692 03AC2FAA 895B688D</span><br><span class="line">B8F4A0E6 FDC15964 A5573FD7 6405ED1E</span><br><span class="line">6F205469 7F34C69D 3D36E475 52AF6A5B</span><br><span class="line">DFD15C31 85BA64EF F95DD592 4B42C314</span><br><span class="line">AC655762 C0F0F5A1 018824E4 17C56E16</span><br><span class="line">AC5AA84C 034F7A53 2C9A801B 8AED239F</span><br><span class="line">—— END LICENSE ——</span><br></pre></td></tr></table></figure></p></li>
+<li><p>st3 code <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">—– BEGIN LICENSE —–</span><br><span class="line">TwitterInc</span><br><span class="line">200 User License</span><br><span class="line">EA7E-890007</span><br><span class="line">1D77F72E 390CDD93 4DCBA022 FAF60790</span><br><span class="line">61AA12C0 A37081C5 D0316412 4584D136</span><br><span class="line">94D7F7D4 95BC8C1C 527DA828 560BB037</span><br><span class="line">D1EDDD8C AE7B379F 50C9D69D B35179EF</span><br><span class="line">2FE898C4 8E4277A8 555CE714 E1FB0E43</span><br><span class="line">D5D52613 C3D12E98 BC49967F 7652EED2</span><br><span class="line">9D2D2E61 67610860 6D338B72 5CF95C69</span><br><span class="line">E36B85CC 84991F19 7575D828 470A92AB</span><br><span class="line">—— END LICENSE ——</span><br></pre></td></tr></table></figure></p></li>
+</ol>
+<h2 id="关于备课笔记">关于备课笔记</h2>
+<p>高一高二的与高三的不适合放在一起, 一方面是因为小节的安排有不同, 另一方面难道也会有不一样. 故把新课的备课笔记与高三复习的备课笔记分成两个文件, 相互对照.<br>
+* 新课: 知识点,例题,习题(ABC)    * 复习课: 高三貌似不适合讲课. 把题收集整理好就可以了. 适当的专题还是需要的.</p>
+<h2 id="others">others</h2>
+<ol style="list-style-type: decimal">
+<li>pandoc -t beamer --latex-engine=xelatex --template=my_beamer_template slides.txt -o example004.pdf</li>
+</ol>
+<p>pandoc -t beamer -i --latex-engine=xelatex --template=my_beamer_template slides.txt -o example004.pdf</p>
+<p>其中的 -i 选项是为了让内容逐条显示(点击/空格etc)</p>
+<p>% http://liumh.com/2014/07/05/pandoc-produce-slide-shows/</p>
+<p>% http://notes.11ten.net/markdown-beamer.html</p>
+<ol start="2" style="list-style-type: decimal">
+<li>关于rss: inoreader有ios/网页,可以同步; foxmail没有ios.</li>
+</ol>
+<h2 id="office">office</h2>
+<ol style="list-style-type: decimal">
+<li><p><a href="https://www.zhihu.com/question/52157612" target="_blank" rel="noopener">Nordri Tools: ppt插件</a>, 已改名为<a href="https://www.islide.cc/" target="_blank" rel="noopener">islide</a></p></li>
+<li><p><a href="https://laod.cn/black-technology/cmd-obtain-wifi-password.html" target="_blank" rel="noopener">dos一键获取已连wifi密码</a> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">for /f &quot;skip=9 tokens=1,2 delims=:&quot; %i in (&apos;netsh wlan show profiles&apos;) do  @echo %j | findstr -i -v echo | netsh wlan show profiles %j key=clear</span><br></pre></td></tr></table></figure></p></li>
+<li><p><a href="https://github.com/tzhuan/ntu-thesis/wiki" target="_blank" rel="noopener">关于makefile的例子</a></p></li>
+</ol>
+<h1 id="maths-todo">maths todo</h1>
+<p>from github(mymd/mymaths)</p>
+<h2 id="问题征解">问题征解</h2>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(P\)</span>是空间固定点, 过<span class="math inline">\(P\)</span>的平面与三轴交点分别为<span class="math inline">\(A,B,C\)</span>.<br>
+问: 当<span class="math inline">\(\triangle{ABC}\)</span>的面积最小时, 周长最小时, 四面体<span class="math inline">\(O-ABC\)</span>的体积最小时, 表面积最小时, 点<span class="math inline">\(P\)</span>在<span class="math inline">\(\triangle{ABC}\)</span>的什么位置? 或者是什么心? <a href="http://kuing.orzweb.net/viewthread.php?tid=4135&amp;extra=page%3D1" target="_blank" rel="noopener">链接</a></li>
+</ol>
+<h2 id="todo">todo</h2>
+<ol style="list-style-type: decimal">
+<li><a href="http://kuing.orzweb.net/viewthread.php?tid=4093&amp;rpid=17937&amp;ordertype=0&amp;page=1#pid17937" target="_blank" rel="noopener">虚拟对称轴法</a><br>
+<img src="../../../images/m1.png" alt="图片名称" style="zoom:80%"><br>
+
+<div align="center">
+<img src="../../../images/m1.png">
+</div>
+<blockquote>
+<p>第二小问分离变量后，再用虚拟对称轴法搞定，呵呵！</p>
+</blockquote></li>
+<li><a href="http://www.artofproblemsolving.com/community/c6h205183p1130901" target="_blank" rel="noopener">EMV定理</a>
+<ul>
+<li><a href="http://zhidao.baidu.com/question/135293985758459725.html" target="_blank" rel="noopener">例子1</a>, 此链接中有有用信息.</li>
+</ul></li>
+<li><p><del><a href="http://kuing.orzweb.net/viewthread.php?tid=2374&amp;extra=page%3D3" target="_blank" rel="noopener">数列型的不等式水母</a></del></p></li>
+<li><p><del><a href="http://kuing.orzweb.net/viewthread.php?tid=2517&amp;extra=&amp;page=1" target="_blank" rel="noopener">关于<span class="math inline">\(\ln{x}\)</span>的不等式</a></del></p></li>
+<li><p><a href="http://kuing.orzweb.net/viewthread.php?tid=4032&amp;extra=&amp;page=1" target="_blank" rel="noopener">距离的最大最小值</a></p></li>
+<li><p><a href="http://kuing.orzweb.net/viewthread.php?tid=3901&amp;extra=page%3D4" target="_blank" rel="noopener">互相垂直焦点弦的中点连线</a></p></li>
+<li><p><a href="http://kuing.orzweb.net/viewthread.php?tid=3918&amp;rpid=16969&amp;ordertype=0&amp;page=1#pid16969" target="_blank" rel="noopener">三角形分布</a></p></li>
+<li><p>常庚哲 数学竞赛中的函数[x] 中科大 1989</p></li>
+<li><p>kuing论坛上帖子, 每一楼都得看, 水很少.</p></li>
+<li><p><a href="http://kuing.orzweb.net/viewthread.php?tid=3818&amp;extra=page%3D10" target="_blank" rel="noopener">Soddy圆</a></p></li>
+<li><p><a href="http://kuing.orzweb.net/viewthread.php?tid=3277&amp;extra=page%3D10" target="_blank" rel="noopener">单峰函数的广义对称</a></p></li>
+<li><p>驻点</p></li>
+<li><p><a href="http://kuing.orzweb.net/viewthread.php?tid=3567" target="_blank" rel="noopener">惯性矩不等式</a>, kuingluing20151222 T1.5.5</p></li>
+<li><p>一元三次方程的求根公式, 关键是那个变换. <a href="http://kuing.orzweb.net/viewthread.php?tid=3275" target="_blank" rel="noopener">卡当公式</a>; T2.2.11.</p></li>
+<li><p>轮换的经典设中间法: kuing T2.1.13的注</p></li>
+<li><p>做一个小学初中经典题目的集子. kuing T2.2.7</p></li>
+<li><p>切比雪夫多项式. kuing T2.3.2</p></li>
+<li><p>T2.4.2</p></li>
+<li><p>kuing在数学空间上写了个错题集, 之前看过部分, 有时间要看完.</p></li>
+<li><p>作差有理化放缩法 kuing T3.5.1 数学空间, 2013(4): 30-37.</p></li>
+<li><p>三角函数公式微型整理 数学空间, 2011(2): 8-15.</p></li>
+<li><p>main33与main46中的高斯函数需要整合.</p></li>
+<li><p>关键在于意识, 比如cauchy不等式及其分式形式.</p></li>
+<li><p>半凹半凸定理. kuing T4.6.5 P426 kuing T4.6.50 P472</p></li>
+<li><p>Hlawka不等式, Hlawka恒等式: kuing T4.6.58 P483</p></li>
+<li><p>kuing T4.6.60,61,62貌似很经典.</p></li>
+<li><p>复数各个方向的自我加深, 另外还有极坐标.</p></li>
+<li><p>平面几何的几大定理: Pascal, M等.</p></li>
+<li><p>极点极线: (1) 自行参考高等几何的书籍(kuing P527) (2) http://kuing.orzweb.net/viewthread.php?tid=4798</p></li>
+<li><p>kuing T5.2.6 P676 椭圆上动点到定点距离最值问题,直线上动点到三定点的距离和最值问题,这些一般来说都会遇到四次方程, 除了特殊情况或者数据是精心设计过的才会有简单解.</p></li>
+<li><p>pappus定理 kuing T5.2.56</p></li>
+<li><blockquote>
+<p>由于转化出来的是下凸，意味着各种方法都可以随便撸，比如说切线法啊，配方+三角形不等式+均值啊等等 <a href="http://kuing.orzweb.net/viewthread.php?tid=4844" target="_blank" rel="noopener">链接</a></p>
+</blockquote></li>
+</ol>
+<h1 id="geogebra使用备注">geogebra使用备注</h1>
+<p>from github(gitme)</p>
+<ol style="list-style-type: decimal">
+<li>手工画图, 然后导出pgf/tikz, 再放到standalone.tex中生成pdf插入.tex中去:
+<ol style="list-style-type: decimal">
+<li>把坐标系放大, 正常情况下<span class="math inline">\(4\times 4\)</span>正好;</li>
+<li>图画好后, 将图放在第一象限, 最好贴着坐标轴, 理由在下一步;</li>
+<li>在导出pgf/tizk代码时, 在对话框中填入<span class="math inline">\(x_{\min},y_{\min}, x_{\max},y_{\max}\)</span>, 生成pgf/tikz代码;</li>
+<li>documentclass选择为standalone, 拷贝代码, xelatex生成pdf. <img src="../../../images/geogebra001.png"></li>
+</ol></li>
+<li><p>高级选项中的任何修改, 都要返回上级菜单, 选择&quot;保存设置&quot;.</p></li>
+<li><p>新增文件, 写好文件, 然后上传. 只有上传是git的事情, 其他都不是.<br>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">git add files.md </span><br><span class="line">git commit -m &quot;注解说明&quot;</span><br><span class="line">git push origin master</span><br><span class="line">```  </span><br><span class="line"></span><br><span class="line">3. git的日常  </span><br><span class="line">上班: `git clone git@github.com:xyzio/gitme.git`  </span><br><span class="line">下班:</span><br></pre></td></tr></table></figure></p></li>
+</ol>
+<p>git add git.md git commit -m &quot;注解说明&quot; git push origin master ```</p>
+<ol start="4" style="list-style-type: decimal">
+<li><p><a href="http://ju.outofmemory.cn/entry/16775" target="_blank" rel="noopener">多个github帐号的SSH key切换</a></p></li>
+<li><p><a href="http://www.ruanyifeng.com/blog/2012/08/blogging_with_jekyll.html" target="_blank" rel="noopener">用github Pages和Jekyll搭建blog</a>, <a href="http://www.cnfeat.com/blog/2014/05/11/how-to-build-a-blog/" target="_blank" rel="noopener">另一种教程</a>,</p></li>
+</ol>
+<p><a href="https://www.ezlippi.com/blog/2015/03/github-pages-blog.html" target="_blank" rel="noopener">还有</a><br>
+&gt; 在该目录下手动创建如下文件和文件夹，最终形成这样的结构：<br>
+* _includes：默认的在模板中可以引用的文件的位置，后面会提到<br>
+* _layouts：默认的公共页面的位置，后面会提到<br>
+* _posts：博客文章默认的存放位置<br>
+* .gitignore：git将忽略这个文件中列出的匹配的文件或文件夹，不将这些纳入源码管理<br>
+* _config.yml：关于jekyll模板引擎的配置文件<br>
+* index.html：默认的主页</p>
+<h1 id="好玩的东西">好玩的东西</h1>
+<ol style="list-style-type: decimal">
+<li><p><a href="https://laod.cn/design/page/hitokoto-yiyan.html" target="_blank" rel="noopener">给博客加上一言经典语句</a>, <a href="http://hitokoto.cn/" target="_blank" rel="noopener">一言</a><br>
+F5刷新一次, 更新一次一句话.</p></li>
+<li><p><a href="">Microsoft Office 2013, 不能打开文件</a><br>
+&gt; 要把office的信任中心的设置修改下</p></li>
+<li><p><a href="https://duckduckgo.com/" target="_blank" rel="noopener">duckduck搜索</a>, <a href="https://greasyfork.org/zh-CN/scripts/21316-douban-download-search-%E6%94%AF%E6%8C%81https" target="_blank" rel="noopener">猴油脚本: Douban Download Search（支持https）</a>的代码里面有关于duckduckgo示例.</p></li>
+<li><p><a href="https://www.jiumodiary.com/" target="_blank" rel="noopener">鸠摩搜索(电子书)</a>: 用来搜书.</p></li>
+<li><p><a href="http://www.pansou.com/" target="_blank" rel="noopener">用于国内外网盘内容搜索</a></p></li>
+<li><p><a href="http://gen.lib.rus.ec/" target="_blank" rel="noopener">Library Genesis （创世纪图书馆）</a>: 地球上最牛的（英文）电子书站点. 内容极其丰富，电子书质量极高！ 这个站点让你免费下载超过 200 万本高质量书籍，包括科研论文、小说、漫画、杂志等。</p></li>
+<li><p><a href="http://www.gutenberg.org/" target="_blank" rel="noopener">古腾堡计划</a></p></li>
+<li><p><a href="http://www.axmath.icoc.cc/" target="_blank" rel="noopener">Axmath</a>: 公式编辑器, 收费, 国产, 评论说卸载时可能有问题, 所以拒绝使用.</p></li>
+<li><p><a href="https://zhuanlan.zhihu.com/p/27072646" target="_blank" rel="noopener">Word中高效输入公式</a> &gt; Word2013中自带的公式输入已经很好了, 部分兼容LaTex语法. 把默认的字体替换一下, 更数学.</p></li>
+<li><a href="https://www.zhihu.com/question/22919326/answer/23499484" target="_blank" rel="noopener">Windows下的高效工具</a>
+<ul>
+<li>--TeraCopy: 用于copy大量文件, 但是收费, 所以不要.--</li>
+<li>Chocolatey: Windows上的apt-get, 没试过.</li>
+</ul></li>
+<li><p><a href="https://github.com/zmywly8866/Programer-s-tools-list" target="_blank" rel="noopener">Windows软件列表</a></p></li>
+<li><p><a href="http://cjkis.me/capslock+/" target="_blank" rel="noopener">Capslock+</a>: 一个加强 Capslock 键的功能，以提高效率的工具. <a href="https://www.zhihu.com/question/22919326/answer/201183511" target="_blank" rel="noopener">使用说明就只看这一个.</a></p></li>
+<li><p><a href="https://sourceforge.net/projects/freefilesync/" target="_blank" rel="noopener">FreeFileSync</a>: 用于同步文件, 比如pc与u盘, 比如备份盘与工作盘. 记得Windows自家就有类似工具.</p></li>
+<li><hr></li>
+<li><p><a href="http://www.latexstudio.net/hulatex/package/float.htm" target="_blank" rel="noopener">floatrow宏包</a>, 使用实例参见<a href="https://github.com/jermer/alg-book" target="_blank" rel="noopener">ab_preamble.tex</a></p></li>
+<li><p><a href="http://bbs.ctex.org/forum.php?mod=viewthread&amp;tid=68537" target="_blank" rel="noopener">setspace宏包少用</a></p></li>
+<li><p><a href="http://www.cnblogs.com/Eufisky/p/3801317.html" target="_blank" rel="noopener">epigraph宏包用来写章节头上的一句名人名言</a></p></li>
+<li><p>做个glossary(名词/术语索引)还是很有作用的. 使用实例参见<a href="https://github.com/jermer/alg-book" target="_blank" rel="noopener">ab_preamble.tex</a>.</p></li>
+<li><p><a href="https://github.com/jermer/alg-book" target="_blank" rel="noopener">ab_preamble.tex</a>中的插图(一行多图)可以参考.</p></li>
+</ol>
+<hr>
+<ol style="list-style-type: decimal">
+<li><p><a href="https://jdhao.github.io/2017/03/19/windows-sublime-usage-related-issue/" target="_blank" rel="noopener">st3的一些设置</a>: 好.</p></li>
+<li><p><a href="https://jdhao.github.io/2017/03/04/Sublime-Windows-Markdown/" target="_blank" rel="noopener">st3与markdown</a></p></li>
+<li><p><a href="https://jdhao.github.io/2017/02/26/hexo-install-use-issue/" target="_blank" rel="noopener">hexo-next</a></p></li>
+</ol>
+
+        
+      </div>
+      
+      
+      
+    </div>
+    
+
+
+
+    
+    
+    
+  </div>
+
+
+          </div>
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">LOG</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">18</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">3</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">28</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  <a href="https://github.com/logithm" target="_blank" title="GitHub"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                  
+                </span>
+              
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#备忘录"><span class="nav-number">1.</span> <span class="nav-text">备忘录</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#关于备课笔记"><span class="nav-number">1.1.</span> <span class="nav-text">关于备课笔记</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#others"><span class="nav-number">1.2.</span> <span class="nav-text">others</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#office"><span class="nav-number">1.3.</span> <span class="nav-text">office</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#maths-todo"><span class="nav-number">2.</span> <span class="nav-text">maths todo</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#问题征解"><span class="nav-number">2.1.</span> <span class="nav-text">问题征解</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#todo"><span class="nav-number">2.2.</span> <span class="nav-text">todo</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#geogebra使用备注"><span class="nav-number">3.</span> <span class="nav-text">geogebra使用备注</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#好玩的东西"><span class="nav-number">4.</span> <span class="nav-text">好玩的东西</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">LOG</span>
+
+  
+
+  
+</div>
+
+
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/theme-next/hexo-theme-next">NexT.Mist</a></div>
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv" title="总访客量">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+    </span>
+  
+
+  
+    <span class="site-pv" title="总访问量">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.0.5"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.0.5"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.0.5"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.0.5"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.0.5"></script>
+
+
+
+  
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+
+  
+
+
+  
+  
+
+  
+  
+  
+  <script src="/lib/pangu/dist/pangu.min.js?v=3.3"></script>
+  <script type="text/javascript">pangu.spacingPage();</script>
+
+
+  
+
+  
+
+  
+
+</body>
+</html>

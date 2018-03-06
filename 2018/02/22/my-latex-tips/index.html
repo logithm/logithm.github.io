@@ -1,0 +1,997 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-CN">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=6.0.5" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.0.5">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.0.5">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.0.5">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.0.5" color="#222">
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '6.0.5',
+    sidebar: {"position":"left","display":"hide","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  
+  <meta name="keywords" content="updating,package,tex,tips," />
+
+
+<meta name="description" content="如题">
+<meta name="keywords" content="updating,package,tex,tips">
+<meta property="og:type" content="article">
+<meta property="og:title" content="LaTeX 笔记">
+<meta property="og:url" content="http://logithm.github.io/2018/02/22/my-latex-tips/index.html">
+<meta property="og:site_name" content="Nogit">
+<meta property="og:description" content="如题">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-02-24T06:19:58.671Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="LaTeX 笔记">
+<meta name="twitter:description" content="如题">
+
+
+
+
+
+
+  <link rel="canonical" href="http://logithm.github.io/2018/02/22/my-latex-tips/"/>
+
+
+
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+  <title>LaTeX 笔记 | Nogit</title>
+  
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"> <div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Nogit</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">有无之间</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页</a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档</a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            <i class="menu-item-icon fa fa-fw fa-th"></i> <br />分类</a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签</a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            <i class="menu-item-icon fa fa-fw fa-user"></i> <br />关于</a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+  
+
+
+
+ </div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://logithm.github.io/2018/02/22/my-latex-tips/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="LOG">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Nogit">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">LaTeX 笔记</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-22T09:56:22+08:00">2018-02-22</time>
+            
+
+            
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/工具/" itemprop="url" rel="index"><span itemprop="name">工具</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item-icon"
+            >
+            <i class="fa fa-eye"></i>
+             阅读次数： 
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
+
+          
+
+          
+              <div class="post-description">如题</div>
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="切记">切记</h1>
+<ul>
+<li>.cls/.sty/package选择用default选项最好, 因为可移植性强.</li>
+<li>抛弃CJK, 转投utf8.</li>
+<li>放弃ctex套装, 不用miktex, 选择texlive. (据说mac下选择mactex).</li>
+<li>xelatex+ctex宏包</li>
+<li></li>
+</ul>
+<h1 id="tips">tips</h1>
+<ol style="list-style-type: decimal">
+<li><p><a href="https://yangwenbo.com/articles/latex-tips-2010-04.html" target="_blank" rel="noopener">拼凑中文生僻字</a> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\hbox&#123;\scalebox&#123;0.4&#125;[1]&#123;王&#125;\scalebox&#123;0.6&#125;[1]&#123;莹&#125;&#125;</span><br></pre></td></tr></table></figure></p></li>
+<li><p><a href="https://yangwenbo.com/articles/latex-tips-2010-04.html" target="_blank" rel="noopener">为插图加框</a> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\fbox&#123;\includegraphics[width=0.9\textwidth]&#123;figname&#125;&#125;</span><br></pre></td></tr></table></figure></p></li>
+<li><p>latex中没有theorem环境, 所谓的theorem其实是一个集合名称, 可以通过定理环境来定义你需要的定理/引理/...等环境.(这个理解有问题)</p></li>
+<li><p>newenvironment得到的是列表(item); 而newtheoremstyle得到是单个环境,如begin{example}, 无非给个counter, 比如例3.4.1.(这个理解有问题)</p></li>
+<li><p><a href="http://zoho.is-programmer.com/user_files/zoho/File/latexlog.pdf" target="_blank" rel="noopener">smash: 以将已有的盒子拍扁，保持宽度不变，但将高度和深度变为零</a></p></li>
+<li><p>排版试卷直接用bhcexam宏包就可以了(2016-09-13), xelatex, 看test3与test4头文件的区别. D:_aux</p></li>
+<li><p><a href="http://www.latexstudio.net/archives/7446" target="_blank" rel="noopener">autoref命令直接产生“图1.1”“式1.1”等样</a></p></li>
+<li><p><a href="http://jincheng.blog.51cto.com/4625177/1604688" target="_blank" rel="noopener">latex 表格列宽度固定的情况下让文字居中显示</a>: <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">在列宽后加入&lt;&#123;\centering&#125;, 即从&#123;p&#123;2cm&#125;&#125;改为&#123;p&#123;2cm&#125;&lt;&#123;\centering&#125;&#125;</span><br></pre></td></tr></table></figure></p></li>
+<li><p>当前（2015-05-04）相对成熟且稳定的技术是 xeCJK，推荐使用；更早的技术则不推荐使用；LuaTeX-ja 是日本方面开发的，基于 LuaTeX 引擎，有诸多问题， 建议观望. <a href="https://www.zhihu.com/question/30090572" target="_blank" rel="noopener">知乎孟晨</a></p></li>
+<li><p>可以说几乎每个人都走过使用 CJK 宏包然后搞一大堆问题出来的弯路，我也不例外。不怪新手，百度一下“LaTeX 中文”，有一半以上还在拿 CJK 宏包说事儿的。 这在十年前不是弯路，而是支持中文的几乎唯二的道路之一（另一条是CCT）。但是这是一个很难配置的宏包，中文字体这一关就烦死个人，而且和其 他宏包在一起用的时候会出大大小小各种问题。所以为了你自己方便，也为了方便他人帮助你解决问题，用 LaTeX 排版中文请先学会使用 xeCJK 宏包。 <a href="https://www.zhihu.com/question/30090572" target="_blank" rel="noopener">知乎Louis Stuart</a></p></li>
+<li><p>这两个警告在只加载amsmath时就出现 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">W: E:\yaodoc\desktop\texmtest\main01.tex:41 Font shape `OMX/cmex/m/n&apos; in size &lt;10.54&gt; not available(Font) size &lt;10.95&gt; substituted  </span><br><span class="line">W: E:\yaodoc\desktop\texmtest\main01.tex:0 Size substitutions with differences(Font) up to 0.41pt have occurred.</span><br></pre></td></tr></table></figure></p></li>
+<li><p>关于书签: UTF-8 + XeLaTeX(目前最最最最最最最最推荐的方式)<a href="https://www.zhihu.com/question/25074347" target="_blank" rel="noopener">知乎孟晨</a></p></li>
+<li><p><a href="https://www.zhihu.com/question/25074347" target="_blank" rel="noopener">关于中文书签</a></p></li>
+</ol>
+<h1 id="各种宏包">各种宏包</h1>
+<h2 id="enumitem">enumitem</h2>
+<ol style="list-style-type: decimal">
+<li><p><a href="https://github.com/CTeX-org/ctex-kit/issues/209" target="_blank" rel="noopener">ctex宏包的</a><br>
+<code>\begin{enumerate}[label = \chinese* ]</code> 报错的解决方案:<br>
+<code>\AddEnumerateCounter{\chinese}{\chinese}{\quad}</code></p></li>
+<li><p><a href="http://bbs.ctex.org/forum.php?mod=viewthread&amp;tid=74847" target="_blank" rel="noopener">如何才能让enumitem的各级标题随着level改变大小</a> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">\setlist[enum, 1]&#123;label*=\arabic*., listparindent=21pt, font=\bfseries\tiny, before*=\erhao &#125;</span><br><span class="line">\setlist[enum, 2]&#123;label*=\arabic*., listparindent=21pt, font=\bfseries\tiny, before*=\sihao &#125;</span><br><span class="line">\setlist[enum, 3]&#123;label*=\arabic*., listparindent=21pt, font=\bfseries\tiny, before*=\wuhao &#125;</span><br></pre></td></tr></table></figure></p></li>
+<li><p>编号黑体化<br>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\begin&#123;enumerate&#125;[font=\textbf]</span><br></pre></td></tr></table></figure></p></li>
+<li><p>列表宏包: enumerate, enumitem, paralist</p></li>
+</ol>
+<h2 id="关于hyperref宏包">关于hyperref宏包</h2>
+<ol style="list-style-type: decimal">
+<li>autoref: chapter,section,example,code,figure,table,equation.<br>
+问题是相应的设置, 比如thechapter, 比如对应的, 这里的chap.<br>
+, 其中的 xxx 可取: equation, theorem, footnote, item, figure, table, part, ppendix, chapter, section, subsection, subsubsection, paragraph, subparagraph, page.</li>
+</ol>
+<h2 id="常见宏包简介">常见宏包简介</h2>
+<ol style="list-style-type: decimal">
+<li><a href="http://www.howtotex.com/packages/9-essential-latex-packages-everyone-should-use/" target="_blank" rel="noopener">9 essential LaTeX packages everyone should use</a>
+<ul>
+<li>amsmath</li>
+<li>geometry</li>
+<li>graphicx</li>
+<li>nag</li>
+<li>microtype</li>
+<li>siunitx</li>
+<li>cleveref</li>
+<li>hyperref</li>
+<li>booktabs</li>
+</ul></li>
+<li>中文支持
+<ul>
+<li>ctex - 封装好的中文支持和版式调整工具，定义了许多方便的工具<br>
+</li>
+<li>xeCJK - XeLaTeX 下的中文字体选择和禁则、压缩的处理<br>
+</li>
+<li>fontspec - XeLaTeX 下的西文字体选择<br>
+</li>
+</ul></li>
+<li>页面布局类
+<ul>
+<li>geometry - 调整页面大小、页边距等尺寸<br>
+</li>
+<li>fancyhdr - 设计页眉页脚<br>
+</li>
+<li>titlesec - 设计章节标题格式<br>
+</li>
+<li>titletoc - 设计目录格式<br>
+</li>
+</ul></li>
+<li>超链接和 PDF 的各种功能。
+<ul>
+<li>hyperref - 超链接，PDF 书签，PDF 表单，PDF 元信息……<br>
+</li>
+<li>media9 - 插入 Flash、视频等<br>
+</li>
+</ul></li>
+<li>图表和浮动体。
+<ul>
+<li>graphicx - 插图</li>
+<li>xcolor - 颜色</li>
+<li>tikz - 绘图</li>
+<li>booktabs - 三线表</li>
+<li>multirow - 列合并单元格（cell）</li>
+<li>makecell - 在单元格内手动换行</li>
+<li>longtable - 换页表格</li>
+<li>tabu - 封装了各种接口的表格宏包，制表强烈推荐</li>
+<li>threeparttable - 在表格中使用脚标，和 tabu 有冲突，补丁：https://gist.github.com/157a703e0ed8804e7696</li>
+<li>diagbox - 斜线表头（作者： <span class="citation">@刘海洋</span>）</li>
+<li>float - 提供了 H 选项，禁止浮动体浮动（除非必要，不建议这么干）</li>
+<li>placeins - 提供了 命令，限制浮动体浮动范围</li>
+</ul></li>
+<li>列表环境。
+<ul>
+<li>enumitem - 修改列表环境的各种间距、label 样式等的不二法门</li>
+</ul></li>
+<li>其他一些工具。
+<ul>
+<li>nag - 检查你是否使用了过时的宏包和命令的宏包</li>
+<li>etoolbox - 主要是针对宏包和文档类开发者，不过提供了一些对环境的钩子，有时候很有用</li>
+<li>xpatch - 修补命令用的</li>
+<li>environ - 增强了 LaTeX 本来的 的功能，解决了一些花括号不匹配导致的问题</li>
+<li>fontawesome - 提供一些社交网站等网络世界常用的图标, 比如dropbox/facebook等.</li>
+</ul></li>
+<li>宏包替换</li>
+</ol>
+<ul>
+<li>biber 代替 bibtex</li>
+<li>polyglossia 代替 babel</li>
+<li>xindy 代替 makeindex</li>
+<li>画图用 TikZ + Asymptote 分工，代替 MetaPost、PSTricks 和 xfig等等其他所有绘图包</li>
+</ul>
+<h1 id="参考">参考</h1>
+<ol start="7" style="list-style-type: decimal">
+<li>关于目录的页码涉及的宏包: fancyhdr, titlesec, tocloft</li>
+<li>input需要指定后缀, include貌似不需要. 至少对于.tex文件如此.<br>
+</li>
+<li><a href="https://www.texide.com/help/latex_bib_and_index_and_ref" target="_blank" rel="noopener">生成索引(index)</a><br>
+</li>
+<li>关于字体方面的警告(font shape之类的)的<a href="http://bbs.ctex.org/forum.php?mod=viewthread&amp;tid=77584" target="_blank" rel="noopener">说明</a>: T1/Amiri/m/n = 编码/是字族名/m代表中等粗细(不是粗体)/n代表upright(不是 italic)</li>
+<li><a href="https://www.ctan.org/pkg/xindy" target="_blank" rel="noopener">xindy</a>取代<a href="https://www.ctan.org/pkg/makeindex" target="_blank" rel="noopener">makeindex</a>, 来自<a href="https://www.zhihu.com/question/21088362" target="_blank" rel="noopener">zhihu邓博元</a></li>
+<li>biber 取代 bibtex, polyglossia 取代 babel, xindy 取代 makeindex. <a href="https://www.zhihu.com/question/21088362" target="_blank" rel="noopener">知乎邓博元</a></li>
+<li><a href="https://lttt.blog.ustc.edu.cn/2012/09/05/%E8%BD%AC%E8%BD%BDxelatex%E8%B0%83%E7%94%A8%E6%9C%AC%E5%9C%B0%E4%B8%AD%E6%96%87%E5%AD%97%E4%BD%93.html" target="_blank" rel="noopener">XeLaTeX调用本地中文字体</a></li>
+<li><a href="https://github.com/wzpan/scnuthesis/commits?author=wzpan" target="_blank" rel="noopener">slashbox宏包已过时, 当前宏包是diagbox</a></li>
+<li><a href="https://liam0205.me/2017/05/17/help-the-url-command-from-hyperref-to-break-at-line-wrapping-point/" target="_blank" rel="noopener">url宏包过时, 被hyperref宏包代替, url的换行</a></li>
+</ol>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/updating/" rel="tag"># updating</a>
+          
+            <a href="/tags/package/" rel="tag"># package</a>
+          
+            <a href="/tags/tex/" rel="tag"># tex</a>
+          
+            <a href="/tags/tips/" rel="tag"># tips</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/02/22/sublime-text/" rel="next" title="Sublime Text 3 笔记">
+                <i class="fa fa-chevron-left"></i> Sublime Text 3 笔记
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/02/22/东西数学物语读后/" rel="prev" title="《东西数学物语》读后">
+                《东西数学物语》读后 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">LOG</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">18</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">3</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">28</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  <a href="https://github.com/logithm" target="_blank" title="GitHub"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                  
+                </span>
+              
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#切记"><span class="nav-number">1.</span> <span class="nav-text">切记</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#tips"><span class="nav-number">2.</span> <span class="nav-text">tips</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#各种宏包"><span class="nav-number">3.</span> <span class="nav-text">各种宏包</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#enumitem"><span class="nav-number">3.1.</span> <span class="nav-text">enumitem</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#关于hyperref宏包"><span class="nav-number">3.2.</span> <span class="nav-text">关于hyperref宏包</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常见宏包简介"><span class="nav-number">3.3.</span> <span class="nav-text">常见宏包简介</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考"><span class="nav-number">4.</span> <span class="nav-text">参考</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">LOG</span>
+
+  
+
+  
+</div>
+
+
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/theme-next/hexo-theme-next">NexT.Mist</a></div>
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv" title="总访客量">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+    </span>
+  
+
+  
+    <span class="site-pv" title="总访问量">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.0.5"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.0.5"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.0.5"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.0.5"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.0.5"></script>
+
+
+
+  
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+
+  
+
+
+  
+  
+
+  
+  
+  
+  <script src="/lib/pangu/dist/pangu.min.js?v=3.3"></script>
+  <script type="text/javascript">pangu.spacingPage();</script>
+
+
+  
+
+  
+
+  
+
+</body>
+</html>
