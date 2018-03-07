@@ -1,1 +1,1 @@
-hexo分支是所有文件, 包括md; master分支是生成的静态文件, 即博客.
+blogsource分支用于备份模板主题以及md文件; master分支用于生成的静态文件.
