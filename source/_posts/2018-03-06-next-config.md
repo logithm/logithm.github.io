@@ -11,8 +11,6 @@ description: 一定要搞清楚next主题的版本.
 # 基本情况
 1. NeXT的版本: v6.0.5 (2018-03-06) 
 
-llld
-
 
 
 # NeXT主题的设置(看[官网](http://theme-next.iissnan.com/)最好)
