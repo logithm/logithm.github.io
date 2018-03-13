@@ -140,6 +140,15 @@ for /f "skip=9 tokens=1,2 delims=:" %i in ('netsh wlan show profiles') do  @echo
 
 
 
+# blog todo
+
+1. [blog html5 slides](http://www.lancezhange.com/2015/11/24/iframe-for-presentation-embedding/)
+[嵌入html5,用js](http://www.lancezhange.com/2015/11/23/jmpress-js-in-hexo/)
+
+1. [about mathjax](http://www.lancezhange.com/2015/05/18/Hello-Hexo-and-Goodbay-Octopress/)
+
+1. [maupassant主题](https://www.haomwei.com/technology/maupassant-hexo.html)
+
 
 # maths todo
 from github(mymd/mymaths)

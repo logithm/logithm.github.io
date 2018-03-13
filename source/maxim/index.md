@@ -16,4 +16,11 @@ type: "maxim"
 
 * 知识不能碎片化，要结构化. --- [Zthxxx](https://wiki.zthxxx.me/wiki/index/) 2018-02-27
 
+* Rules are made to be broken, 友情是用来背叛的. 按照这个句式可以造很多句子. 2018-03-13
+
+* 人生天地之间，若白驹之过隙，忽然而已。--- [Lijia Yu](http://yulijia.net/) 2018-03-13
+
+* 极致的幸福，存在于孤独的深海。在这样日复一日的生活里，我逐渐和自己达成和解。--- [yongyuan](https://yongyuan.name/blog/) 2018-03-13
+
+
 
