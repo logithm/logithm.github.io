@@ -83,10 +83,10 @@ update: 已经替换掉markdown的渲染(换成hexo-renderer-pandoc), 所以以�
 
 ## update
 
-next的v6.0.5版本中, 已经提到`pangu.js', 参见作者的[安装说明](https://github.com/theme-next/theme-next-pangu).   
+1. next的v6.0.5版本中, 已经提到`pangu.js', 参见作者的[安装说明](https://github.com/theme-next/theme-next-pangu).   
 需要 `git clone https://github.com/theme-next/theme-next-pangu.git themes/next/source/lib/pangu`
 
-
+1. 多个分类在一个页面下, 通过[新建子类](https://www.zhihu.com/question/33324071/answer/58775540)的方法. (2018-03-16)
 
 
 

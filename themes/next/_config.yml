@@ -112,9 +112,12 @@ index_with_subtitle: false
 menu:
   home: / || home
   archives: /archives/ || archive
-  categories: /categories/ || th
+#  categories: /categories/ || th
   tags: /tags/ || tags
   about: /about/ || user
+  tools: /categories/工具 || wrench
+  maths: /categories/隔三差五 || fire 
+  阅: /categories/指指点点 || book
   #schedule: /schedule/ || calendar
   #sitemap: /sitemap.xml || sitemap
   #commonweal: /404/ || heartbeat
