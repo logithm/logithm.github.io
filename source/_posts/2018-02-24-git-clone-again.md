@@ -31,8 +31,11 @@ description: 终于在B电脑上有机会尝试git clone了, 过程看起来很l
 1. 拷贝node_modules, public, themes/next到相应的目录
 1. 运行myhexo.sh大招
 
+ps: 在B电脑上, git clone, npm install, 编辑修改, git add . , git commit -m "update", git push -u origin blogsource. ---20180318
+
+
 以下才是日常
-下班前在B电脑运行myhexo.sh大招, 回到家在A电脑运行git pull. 依此循环.
+下班前在B电脑运行zhexo cgd gitamp.sh大招, 回到家在A电脑运行git pull. 依此循环.
 
 
 [hexo 多终端同步博客](http://www.joahcy.com/BuildBlog/mutil_term_sync/): 这篇博文应该也是对的.

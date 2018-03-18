@@ -3,4 +3,4 @@ hexo g
 hexo d
 git add .
 git commit -m  "update 20180318."
-git push origin blogsource
+git push -u origin blogsource
