@@ -4,6 +4,15 @@ date: 2018-03-16 12:33:18
 type: "todo"
 ---
 
+# simiki
+
+https://tracholar.github.io/wiki/web/simiki.html
+
+https://tracholar.github.io/wiki/
+
+https://sthsf.github.io/wiki/
+
+https://wiki.tankywoo.com/
 
 
 # blog todo
