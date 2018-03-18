@@ -15,6 +15,25 @@ type: "todo"
 
 1. [maupassant主题](https://www.haomwei.com/technology/maupassant-hexo.html)
 
+1. [simple](http://isnowfy.github.io/): 在github上写博客的更简单的方式.
+
+1. [grav:建blog工具](https://getgrav.org/): 不要用, 可能需要自己搭建php服务器. [理由](https://blog.jamespan.me/posts/blogging-in-non-static-way)
+
+1. [typecho: blog平台](http://typecho.org/)
+
+
+
+# wiki
+
+1. [基于nodejs的wiki---jingo](https://github.com/claudioc/jingo)
+
+1. [TiddlyWiki5](https://github.com/Jermolene/TiddlyWiki5)
+
+1. [nodewiki](https://github.com/nhoss2/nodewiki)
+
+1. [http://prose.io](http://prose.io)
+
+
 
 # maths todo
 from github(mymd/mymaths)
