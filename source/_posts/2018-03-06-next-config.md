@@ -5,7 +5,7 @@ tags: [next, hexo, config]
 categories: 工具
 keywords:
 mathjax: true
-description: 一定要搞清楚next主题的版本.
+description: 一定要搞清楚next主题的版本...
 ---
 
 # 基本情况
