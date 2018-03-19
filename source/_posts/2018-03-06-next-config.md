@@ -12,6 +12,7 @@ description: 一定要搞清楚next主题的版本...
 1. NeXT的版本: v6.0.5 (2018-03-06) 
 
 tk7200 2018-03-19
+530 2018-03-19
 
 # NeXT主题的设置(看[官网](http://theme-next.iissnan.com/)最好)
 1. [基本设置](https://www.jianshu.com/p/efbeddc5eb19) 的[作者](http://www.dragonstyle.win/2017/11/07/Hexo-Next主题优化/), 
