@@ -291,6 +291,161 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://logithm.github.io/2018/03/23/about-parameter/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="LOG">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Nogit">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/03/23/about-parameter/" itemprop="url">关于参数讨论的一道小题</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-23T14:58:04+08:00">2018-03-23</time>
+            
+
+            
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/隔三差五/" itemprop="url" rel="index"><span itemprop="name">隔三差五</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><strong>题目</strong> 已知函数<span class="math inline">\(f(x)=2mx^2+2(m-4)x+1, g(x)=mx\)</span>, 若对于任意实数<span class="math inline">\(x\)</span>, <span class="math inline">\(f(x)\)</span>与<span class="math inline">\(g(x)\)</span>至少有一个为正数, 则实数<span class="math inline">\(m\)</span>的取值范围是___.</p>
+<p><strong>答案</strong>: <span class="math inline">\((0,8)\)</span>.</p>
+<p><strong>分析</strong>: <span class="math inline">\(f(x)=2m(x^2+x)-8x+1\)</span>, 过<span class="math inline">\((0,1)\)</span>与<span class="math inline">\((-1,9)\)</span>. 可惜没什么用.</p>
+<ol style="list-style-type: decimal">
+<li>当<span class="math inline">\(m=0\)</span>时, 不符合题意;<br>
+</li>
+<li>当<span class="math inline">\(m&lt;0\)</span>时, <span class="math inline">\(f(\pm\infty)&lt;0, g(+\infty)&lt;0\)</span>, 不符合题意.<br>
+</li>
+<li>当<span class="math inline">\(m&gt;0\)</span>时, 等价于对任意<span class="math inline">\(x\leqslant0\)</span>, <span class="math inline">\(f(x)&gt;0\)</span>恒成立.<br>
+当<span class="math inline">\(m&gt;0, x\leqslant0\)</span>时, <span class="math inline">\(f(x)&gt;0\iff 2m(x^2+x)&gt;8x-1\iff \dfrac{x^2+x}{8x-1}&lt;\dfrac{1}{2m}\)</span>.<br>
+令<span class="math inline">\(t=8x-1\in(-\infty,-1]\)</span>, 则<span class="math inline">\(\dfrac{x^2+x}{8x-1}=\dfrac{1}{64}\left(t+\dfrac{9}{t}+10\right)\leqslant\dfrac{4}{64}\)</span> (当且仅当 <span class="math inline">\(x=-\dfrac{1}{4}\)</span>时等号成立).<br>
+易得<span class="math inline">\(0&lt;m&lt;8\)</span>.</li>
+</ol>
+<p><strong>注</strong>: 其中分离参数的方法是个trick. qed.</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://logithm.github.io/2018/03/06/next-config/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1599,152 +1754,6 @@ git是命令掉前缀, 比如npm. git add 的意思是用git中的add命令, npm
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://logithm.github.io/2018/02/21/of-pandoc/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="LOG">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Nogit">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/02/21/of-pandoc/" itemprop="url">pandoc笔记</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-21T21:36:33+08:00">2018-02-21</time>
-            
-
-            
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/工具/" itemprop="url" rel="index"><span itemprop="name">工具</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          神器pandoc是个瑞士军刀级的command-line工具, 其主页上有个用来描述文档格式间的转换关系的长长的图. 这篇post的目的是记录自己使用pandoc时的注意点, 备忘录为主.
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/02/21/of-pandoc/">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1792,7 +1801,7 @@ git是命令掉前缀, 比如npm. git add 的意思是用git中的add命令, npm
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">18</span>
+                    <span class="site-state-item-count">19</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -1880,7 +1889,9 @@ git是命令掉前缀, 比如npm. git add 的意思是用git中的add命令, npm
                     
                       
                     
-                    <span class="site-state-item-count">28</span>
+                      
+                    
+                    <span class="site-state-item-count">29</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
