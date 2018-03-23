@@ -59,7 +59,7 @@ update: 已经替换掉markdown的渲染(换成hexo-renderer-pandoc), 所以以�
 写md文件时, 并不需要故意加上这个空白, 跟写tex文件一样. 
 
 [谢益辉](https://yihui.name/cn/2017/05/pangu/)修改了[pangu.js](https://github.com/vinta/pangu.js)的代码, 我将谢的代码写入了
-一个新的文件: zmyjs.js. z的目的是文件排序用的. 
+一个新的文件: zmyjs.js. 其中字母z的目的是文件排序用的. 
 ```
 (function(u, c) {
   var d = document, t = 'script', o = d.createElement(t),
