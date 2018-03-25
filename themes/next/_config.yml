@@ -114,10 +114,10 @@ menu:
   archives: /archives/ || archive
 #  categories: /categories/ || th
   tags: /tags/ || tags
-  about: /about/ || user
-  tools: /categories/工具 || wrench
-  maths: /categories/隔三差五 || fire 
-  阅: /categories/指指点点 || book
+#  about: /about/ || user
+  tab: /categories/工具 || wrench
+  m35: /categories/隔三差五 || fire 
+#  阅: /categories/指指点点 || book
   #schedule: /schedule/ || calendar
   #sitemap: /sitemap.xml || sitemap
   #commonweal: /404/ || heartbeat
