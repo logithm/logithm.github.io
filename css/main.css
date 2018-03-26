@@ -1823,7 +1823,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #b6ffad;
+  background: #44634d;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2695,21 +2695,21 @@ h1 {
   padding: 5px 20px 5px 10px;
   border-radius: 3px;
   border-left: 8px solid #006969;
-  background: #9090ff;
+  background: #e0f0e9;
 }
 h2 {
   font-size: 130%;
   padding: 3px 20px 3px 20px;
   border-radius: 3px;
   border-left: 6px solid #008787;
-  background: #b4b4ff;
+  background: #e6f3ed;
 }
 h3 {
   font-size: 110%;
   padding: 1px 20px 3px 30px;
   border-radius: 3px;
   border-left: 4px solid #00a5a5;
-  background: #d8d8ff;
+  background: #ecf6f1;
 }
 blockquote {
   margin: 10 -20px 20px;
