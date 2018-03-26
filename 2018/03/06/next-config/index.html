@@ -378,41 +378,41 @@
 
       
         <h1 id="基本情况">基本情况</h1>
-<ol style="list-style-type: decimal">
+<ol type="1">
 <li>NeXT的版本: v6.0.5 (2018-03-06)</li>
 </ol>
 <p>tk7200 2018-03-19 530 2018-03-19</p>
 <h1 id="next主题的设置看官网最好">NeXT主题的设置(看<a href="http://theme-next.iissnan.com/" target="_blank" rel="noopener">官网</a>最好)</h1>
-<ol style="list-style-type: decimal">
+<ol type="1">
 <li><a href="https://www.jianshu.com/p/efbeddc5eb19" target="_blank" rel="noopener">基本设置</a> 的<a href="http://www.dragonstyle.win/2017/11/07/Hexo-Next主题优化/" target="_blank" rel="noopener">作者</a>, <a href="http://blog.csdn.net/qq_33699981/article/details/72716951" target="_blank" rel="noopener">这里是出处</a><br>
 </li>
 <li><p><a href="https://maoyanting.github.io/2018/02/07/hexo-NexT%E7%9A%84%E4%BC%98%E5%8C%96/" target="_blank" rel="noopener">进一步修改</a>, <a href="https://reuixiy.github.io/technology/computer/computer-aided-art/2017/06/09/hexo-next-optimization.html" target="_blank" rel="noopener">这个很详细</a>, <a href="https://qianling.pw/hexo-optimization/" target="_blank" rel="noopener">这个也很好</a> , <a href="https://zhuzhuyule.com/archives/" target="_blank" rel="noopener">高级设置</a>, <a href="http://cxjiang.top/2017/04/07/Hexo-NexT/" target="_blank" rel="noopener">也不错</a>, <a href="http://www.lazyboy.site/2017/Next%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A0%B7%E5%BC%8F/" target="_blank" rel="noopener">一些颜色设置</a>,</p></li>
 <li><p>关于换行: <a href="https://github.com/iissnan/hexo-theme-next/issues/1672" target="_blank" rel="noopener">文本编辑器中换行, html中不换行</a> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">marked:</span><br><span class="line">  gfm: true</span><br><span class="line">  pedantic: false</span><br><span class="line">  sanitize: false</span><br><span class="line">  tables: true</span><br><span class="line">  breaks: false # 此为关键</span><br><span class="line">  smartLists: true</span><br><span class="line">  smartypants: true</span><br><span class="line">  modifyAnchors: &apos;&apos;</span><br><span class="line">  autolink: true</span><br></pre></td></tr></table></figure></p></li>
 </ol>
 <p>update: 已经替换掉markdown的渲染(换成hexo-renderer-pandoc), 所以以上设置已删除. 2018-03-06</p>
-<ol start="4" style="list-style-type: decimal">
+<ol start="4" type="1">
 <li><a href="https://github.com/iissnan/hexo-theme-next/issues/1250" target="_blank" rel="noopener">修改文章之间的间距</a></li>
 <li><a href="https://www.zhihu.com/question/49405680" target="_blank" rel="noopener">修改字体与颜色</a>: <code>next\source\css\_variable\base.styl</code></li>
 </ol>
 <h1 id="mathjax">mathjax</h1>
-<ol style="list-style-type: decimal">
+<ol type="1">
 <li>貌似已经直接支持mathjax了, 并且在每个post的头部, 通过 mathjax:true 来决定是否加载. 因为想通过修改<code>\next\layout\_third-party\mathjax.swig</code> 而达到<a href="https://jdhao.github.io/2018/01/25/hexo-mathjax-equation-number/" target="_blank" rel="noopener">方程编号</a>的目的时, 没有成功.</li>
 </ol>
 <h1 id="中英文混排">中英文混排</h1>
-<p>中英文混排时, 习惯在汉字与英文字母及数字之间留一空白, 此空白被成为&quot;<a href="https://github.com/vinta/pangu.js" target="_blank" rel="noopener">盘古之白</a>&quot;. 写md文件时, 并不需要故意加上这个空白, 跟写tex文件一样.</p>
+<p>中英文混排时, 习惯在汉字与英文字母及数字之间留一空白, 此空白被成为“<a href="https://github.com/vinta/pangu.js" target="_blank" rel="noopener">盘古之白</a>”. 写md文件时, 并不需要故意加上这个空白, 跟写tex文件一样.</p>
 <p><a href="https://yihui.name/cn/2017/05/pangu/" target="_blank" rel="noopener">谢益辉</a>修改了<a href="https://github.com/vinta/pangu.js" target="_blank" rel="noopener">pangu.js</a>的代码, 我将谢的代码写入了 一个新的文件: zmyjs.js. 其中字母z的目的是文件排序用的. <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">(function(u, c) &#123;</span><br><span class="line">  var d = document, t = &apos;script&apos;, o = d.createElement(t),</span><br><span class="line">      s = d.getElementsByTagName(t)[0];</span><br><span class="line">  o.src = u;</span><br><span class="line">  if (c) &#123; o.addEventListener(&apos;load&apos;, function(e) &#123; c(e); &#125;); &#125;</span><br><span class="line">  s.parentNode.insertBefore(o, s);</span><br><span class="line">&#125;)(&apos;//cdn.bootcss.com/pangu/3.3.0/pangu.min.js&apos;, function() &#123;</span><br><span class="line">  pangu.spacingPage();</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
 <p>然后, 将zmyjs.js放到<code>\themes\next\source\js\src</code>目录下, 修改<code>\themes\next\layout\_layout.swig</code>文件,<br>
 将 <code>&lt;script type=&quot;text/javascript&quot; src=&quot;/js/src/zmyjs.js&quot;&gt;&lt;/script&gt;</code> 放到 <code>&lt;/body&gt;</code> 之前. 参考<a href="http://longhaoteng.com/2016/08/01/hexo引用自定义js文件和css样式/" target="_blank" rel="noopener">hexo引用自定义js文件和css样式</a>.</p>
 <p>如此一来, HTML和LaTeX里都有了自动加空格的方案.</p>
 <p>另有其他<a href="https://www.liaoyuqin.com/post/tools/zhong-ying-wen-hun-pai" target="_blank" rel="noopener">中英文混排</a>的方案.</p>
 <h2 id="update">update</h2>
-<ol style="list-style-type: decimal">
+<ol type="1">
 <li><p>next的v6.0.5版本中, 已经提到<code>pangu.js</code>, 参见作者的<a href="https://github.com/theme-next/theme-next-pangu" target="_blank" rel="noopener">安装说明</a>.<br>
 需要 <code>git clone https://github.com/theme-next/theme-next-pangu.git themes/next/source/lib/pangu</code></p></li>
 <li><p>多个分类在一个页面下, 通过<a href="https://www.zhihu.com/question/33324071/answer/58775540" target="_blank" rel="noopener">新建子类</a>的方法. (2018-03-16)</p></li>
 </ol>
 <h2 id="已安装的插件">已安装的插件</h2>
-<ol style="list-style-type: decimal">
+<ol type="1">
 <li><a href="https://github.com/mythsman/hexo-douban" target="_blank" rel="noopener">hexo-douban</a>: 生成book/movie/game这几项, 没有music. 另外加载该插件时, <code>hexo g</code>速度慢.(已卸载)</li>
 <li>hexo-math:
 <ul>

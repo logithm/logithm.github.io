@@ -100,11 +100,11 @@
 
 
   
-  <meta name="keywords" content="md,maths,tex,pandoc," />
+  <meta name="keywords" content="md,pandoc,tex,maths," />
 
 
 <meta name="description" content="神器pandoc是个瑞士军刀级的command-line工具, 其主页上有个用来描述文档格式间的转换关系的长长的图. 这篇post的目的是记录自己使用pandoc时的注意点, 备忘录为主.">
-<meta name="keywords" content="md,maths,tex,pandoc">
+<meta name="keywords" content="md,pandoc,tex,maths">
 <meta property="og:type" content="article">
 <meta property="og:title" content="pandoc笔记">
 <meta property="og:url" content="http://logithm.github.io/2018/02/21/of-pandoc/index.html">
@@ -380,19 +380,19 @@
         <h1 id="pandoc笔记">pandoc笔记</h1>
 <p>三星笔记本: win7, pandoc v1.17.2, 默认数据目录 <code>C:\User\xyz\AppData\Roaming\pandoc</code>. 本机没有, 那就建一个.</p>
 <h2 id="pandoc初步">pandoc初步</h2>
-<ol style="list-style-type: decimal">
+<ol type="1">
 <li><a href="http://pandoc.org/" target="_blank" rel="noopener">pandoc</a>在Windows下的安装很简单, 下载, 双击, 一路next即可.</li>
 <li>试试<a href="http://pandoc.org/demos.html" target="_blank" rel="noopener">Demos</a></li>
 <li><code>pandoc --filter pandoc-crossref --filter pandoc-citeproc --biblio reference.bib --csl chinese-gb7714-2005-numeric.csl --latex-engine=xelatex --template=cqu.latex main.md -o main.pdf</code>
 <ul>
 <li>-s: standalone， 这个是pdf的默认选项，可以不管它。</li>
 <li>-S: smart，几乎也是默认选项，大致可以减少出错概率。</li>
-<li>--filter pandoc-crossref，使用交叉引用插件处理文档。</li>
-<li>--filter pandoc-citeproc，使用文献引用插件处理文档。注意顺序，这个必须在 --filter pandoc-crossref 后面</li>
-<li>--biblio reference.bib 告诉 Pandoc 文献的 bibtex 位置，这里我是直接放在同一目录下的，如在其他目录下，请使用相对路径或绝对路径。</li>
-<li>--csl chinese-gb7714-2005-numeric.csl 告诉 pandoc 使用的文献引用格式，这个 csl 文档直接在 zotero 上找的。</li>
-<li>--latex-engine=xelatex 我没有使用默认的 latex 引擎，而是使用 xelatex 这个引擎。</li>
-<li>--template=cqu.latex 告诉 pandoc 使用模版，这个 cqu.latex 是我在默认模版上修改的。模板可以在<a href="https://github.com/jgm/pandoc-templates" target="_blank" rel="noopener">这里</a>找到。</li>
+<li>–filter pandoc-crossref，使用交叉引用插件处理文档。</li>
+<li>–filter pandoc-citeproc，使用文献引用插件处理文档。注意顺序，这个必须在 –filter pandoc-crossref 后面</li>
+<li>–biblio reference.bib 告诉 Pandoc 文献的 bibtex 位置，这里我是直接放在同一目录下的，如在其他目录下，请使用相对路径或绝对路径。</li>
+<li>–csl chinese-gb7714-2005-numeric.csl 告诉 pandoc 使用的文献引用格式，这个 csl 文档直接在 zotero 上找的。</li>
+<li>–latex-engine=xelatex 我没有使用默认的 latex 引擎，而是使用 xelatex 这个引擎。</li>
+<li>–template=cqu.latex 告诉 pandoc 使用模版，这个 cqu.latex 是我在默认模版上修改的。模板可以在<a href="https://github.com/jgm/pandoc-templates" target="_blank" rel="noopener">这里</a>找到。</li>
 <li>main.md -o main.pdf 告诉pandoc输入文档，-o 告诉 pandoc 输出文档。如果需要转换成别的格式，将 pdf 改成该格式对应后缀名即可。 如转换成 Word 格式，将 pdf 改为 docx；转换成 LaTeX 格式，将 pdf 改为 tex。<br>
 </li>
 <li><a href="http://www.zale.site/articles/2016/05/Academia-Writing-Using-Markdown-and-Pandoc.html" target="_blank" rel="noopener">参考</a></li>
@@ -400,9 +400,9 @@
 <li><code>pandoc -N --toc --columns=10 --latex-engine=xelatex -V CJKmainfont=STSong -V geometry:margin=1in -o test.pdf test.md</code>
 <ul>
 <li>-N 为章节进行数字编号</li>
-<li>--toc 为文档添加目录</li>
-<li>--columns 当不设置时表格的宽度可能有问题，会影响表格的宽度</li>
-<li>--latex-engine=xelatex 设置latex引擎，要想正确的输出中文就得指定xelatex作为引擎</li>
+<li>–toc 为文档添加目录</li>
+<li>–columns 当不设置时表格的宽度可能有问题，会影响表格的宽度</li>
+<li>–latex-engine=xelatex 设置latex引擎，要想正确的输出中文就得指定xelatex作为引擎</li>
 <li>-V CJKmainfont=STSong 要想正确的输出中文还得指定一个合适的中文字体，这个字体在Centos上须要先安装好</li>
 <li>-V geometry:margin=1in 指定上下左右的空白尺寸</li>
 <li>-o 指定输出文件名</li>
@@ -411,7 +411,7 @@
 </ol>
 <h2 id="记录">记录</h2>
 <h3 id="从md出发">从md出发</h3>
-<ol style="list-style-type: decimal">
+<ol type="1">
 <li><p>pdf: <code>pandoc --latex-engine=xelatex -V mainfont='SimSun'  input.md -o output.pdf</code> 在530u3c下是可行的. 2018-2-11</p></li>
 <li><p><a href="https://jdhao.github.io/2017/12/10/pandoc-markdown-with-chinese/" target="_blank" rel="noopener">在 Pandoc 2.0 版本中， <code>--pdf-engine</code> 命令取代了原有的 <code>--latex-engine</code></a> 这是一篇好文档, 其中有个st3中的builder, 要弄下来.</p></li>
 <li>tex: <code>pandoc --latex-engine=xelatex -V mainfont='SimSun'  input.md -o output.tex</code> 在三星win7下是可行的. 有几个小问题:
@@ -422,7 +422,7 @@
 <li><p>html: <code>pandoc -s --mathjax input.md -o output.html</code></p></li>
 </ol>
 <h3 id="模板">模板</h3>
-<ol style="list-style-type: decimal">
+<ol type="1">
 <li><code>pandoc -D html</code> 查看缺省的模板</li>
 <li>我把模板放在了<code>C:\Users\tc7200\.pandoc</code></li>
 <li>指定模板: <code>--template=C:/Users/tc7200/.pandoc/template/template.tex</code>, 不可以改为<code>--template=~/.pandoc/template/template.tex</code></li>
@@ -430,12 +430,12 @@
 <li>css文件: <code>--css=~/.pandoc/css/markdownPad-github.css</code></li>
 </ol>
 <h3 id="md-2-htmllatex-enginexelatex">md 2 html(latex-engine=xelatex)</h3>
-<ol style="list-style-type: decimal">
+<ol type="1">
 <li><code>\usepackage[boldfont,slantfont,CJKsetspaces,CJKchecksingle]{xeCJK}</code> 中, 要去掉CJKsetspaces.</li>
 <li>tightlist</li>
 </ol>
 <h3 id="一些舒服的设置">一些舒服的设置</h3>
-<ol style="list-style-type: decimal">
+<ol type="1">
 <li><code>~</code>指的是<code>C:\users\tc7200\</code></li>
 <li>所有的设置(如template, js)都放到同一个地方.</li>
 <li>命令都写到click.sh中去, 然后点击即可.</li>
@@ -464,11 +464,11 @@
           
             <a href="/tags/md/" rel="tag"># md</a>
           
-            <a href="/tags/maths/" rel="tag"># maths</a>
+            <a href="/tags/pandoc/" rel="tag"># pandoc</a>
           
             <a href="/tags/tex/" rel="tag"># tex</a>
           
-            <a href="/tags/pandoc/" rel="tag"># pandoc</a>
+            <a href="/tags/maths/" rel="tag"># maths</a>
           
         </div>
       

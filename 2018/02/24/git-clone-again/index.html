@@ -100,11 +100,11 @@
 
 
   
-  <meta name="keywords" content="hexo,git," />
+  <meta name="keywords" content="git,hexo," />
 
 
 <meta name="description" content="终于在B电脑上有机会尝试git clone了, 过程看起来很low.">
-<meta name="keywords" content="hexo,git">
+<meta name="keywords" content="git,hexo">
 <meta property="og:type" content="article">
 <meta property="og:title" content="git clone again">
 <meta property="og:url" content="http://logithm.github.io/2018/02/24/git-clone-again/index.html">
@@ -380,17 +380,17 @@
         <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">1. install node</span><br><span class="line">2. install git</span><br><span class="line">3. ssh-keygen</span><br><span class="line">4. git config --global user.name &quot;xyzio&quot;</span><br><span class="line">5. git config --global user.email &quot;xyzio@gmail.com&quot;</span><br><span class="line">6. git config --global http.postBuffer 1048576000</span><br><span class="line">7. npm install hexo-cli -g</span><br></pre></td></tr></table></figure>
 <p>第一步: 在A电脑上部署了一切</p>
 <p>第二步: 在B电脑上建立了<a href="http://chitanda.me/2015/06/18/hexo-sync-in-multiple-pc/" target="_blank" rel="noopener">同步环境</a></p>
-<ol style="list-style-type: decimal">
+<ol type="1">
 <li>在hexoblog目录下git init</li>
 <li>新建hexoblog.github.io目录, 以下操作在该目录下进行.</li>
 <li>git init</li>
 <li>git remote add origin https://github.com/xyzio/xyzio.github.io.git</li>
-<li>git fetch --all</li>
-<li>git reset --hard origin/hexo</li>
+<li>git fetch –all</li>
+<li>git reset –hard origin/hexo</li>
 <li>拷贝node_modules, public, themes/next到相应的目录</li>
 <li>运行myhexo.sh大招</li>
 </ol>
-<p>ps: 在B电脑上, git clone, npm install, 编辑修改, git add . , git commit -m &quot;update&quot;, git push -u origin blogsource. ---20180318</p>
+<p>ps: 在B电脑上, git clone, npm install, 编辑修改, git add . , git commit -m “update”, git push -u origin blogsource. —20180318</p>
 <p>以下才是日常 下班前在B电脑运行zhexo cgd gitamp.sh大招, 回到家在A电脑运行git pull. 依此循环.</p>
 <p><a href="http://www.joahcy.com/BuildBlog/mutil_term_sync/" target="_blank" rel="noopener">hexo 多终端同步博客</a>: 这篇博文应该也是对的. ____________________</p>
 <p>A电脑上把一切都弄好, 包括node等环境, hexo安装配置, github的本地及远程仓库.</p>
@@ -417,9 +417,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/hexo/" rel="tag"># hexo</a>
-          
             <a href="/tags/git/" rel="tag"># git</a>
+          
+            <a href="/tags/hexo/" rel="tag"># hexo</a>
           
         </div>
       

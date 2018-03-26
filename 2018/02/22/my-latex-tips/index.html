@@ -100,11 +100,11 @@
 
 
   
-  <meta name="keywords" content="updating,package,tex,tips," />
+  <meta name="keywords" content="tex,tips,package,updating," />
 
 
 <meta name="description" content="如题">
-<meta name="keywords" content="updating,package,tex,tips">
+<meta name="keywords" content="tex,tips,package,updating">
 <meta property="og:type" content="article">
 <meta property="og:title" content="LaTeX 笔记">
 <meta property="og:url" content="http://logithm.github.io/2018/02/22/my-latex-tips/index.html">
@@ -386,10 +386,10 @@
 <li></li>
 </ul>
 <h1 id="tips">tips</h1>
-<ol style="list-style-type: decimal">
+<ol type="1">
 <li><p><a href="https://yangwenbo.com/articles/latex-tips-2010-04.html" target="_blank" rel="noopener">拼凑中文生僻字</a> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\hbox&#123;\scalebox&#123;0.4&#125;[1]&#123;王&#125;\scalebox&#123;0.6&#125;[1]&#123;莹&#125;&#125;</span><br></pre></td></tr></table></figure></p></li>
 <li><p><a href="https://yangwenbo.com/articles/latex-tips-2010-04.html" target="_blank" rel="noopener">为插图加框</a> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\fbox&#123;\includegraphics[width=0.9\textwidth]&#123;figname&#125;&#125;</span><br></pre></td></tr></table></figure></p></li>
-<li><p>latex中没有theorem环境, 所谓的theorem其实是一个集合名称, 可以通过定理环境来定义你需要的定理/引理/...等环境.(这个理解有问题)</p></li>
+<li><p>latex中没有theorem环境, 所谓的theorem其实是一个集合名称, 可以通过定理环境来定义你需要的定理/引理/…等环境.(这个理解有问题)</p></li>
 <li><p>newenvironment得到的是列表(item); 而newtheoremstyle得到是单个环境,如begin{example}, 无非给个counter, 比如例3.4.1.(这个理解有问题)</p></li>
 <li><p><a href="http://zoho.is-programmer.com/user_files/zoho/File/latexlog.pdf" target="_blank" rel="noopener">smash: 以将已有的盒子拍扁，保持宽度不变，但将高度和深度变为零</a></p></li>
 <li><p>排版试卷直接用bhcexam宏包就可以了(2016-09-13), xelatex, 看test3与test4头文件的区别. D:_aux</p></li>
@@ -403,7 +403,7 @@
 </ol>
 <h1 id="各种宏包">各种宏包</h1>
 <h2 id="enumitem">enumitem</h2>
-<ol style="list-style-type: decimal">
+<ol type="1">
 <li><p><a href="https://github.com/CTeX-org/ctex-kit/issues/209" target="_blank" rel="noopener">ctex宏包的</a><br>
 <code>\begin{enumerate}[label = \chinese* ]</code> 报错的解决方案:<br>
 <code>\AddEnumerateCounter{\chinese}{\chinese}{\quad}</code></p></li>
@@ -413,13 +413,13 @@
 <li><p>列表宏包: enumerate, enumitem, paralist</p></li>
 </ol>
 <h2 id="关于hyperref宏包">关于hyperref宏包</h2>
-<ol style="list-style-type: decimal">
+<ol type="1">
 <li>autoref: chapter,section,example,code,figure,table,equation.<br>
 问题是相应的设置, 比如thechapter, 比如对应的, 这里的chap.<br>
 , 其中的 xxx 可取: equation, theorem, footnote, item, figure, table, part, ppendix, chapter, section, subsection, subsubsection, paragraph, subparagraph, page.</li>
 </ol>
 <h2 id="常见宏包简介">常见宏包简介</h2>
-<ol style="list-style-type: decimal">
+<ol type="1">
 <li><a href="http://www.howtotex.com/packages/9-essential-latex-packages-everyone-should-use/" target="_blank" rel="noopener">9 essential LaTeX packages everyone should use</a>
 <ul>
 <li>amsmath</li>
@@ -470,7 +470,7 @@
 <li>longtable - 换页表格</li>
 <li>tabu - 封装了各种接口的表格宏包，制表强烈推荐</li>
 <li>threeparttable - 在表格中使用脚标，和 tabu 有冲突，补丁：https://gist.github.com/157a703e0ed8804e7696</li>
-<li>diagbox - 斜线表头（作者： <span class="citation">@刘海洋</span>）</li>
+<li>diagbox - 斜线表头（作者： <span class="citation" data-cites="刘海洋">@刘海洋</span>）</li>
 <li>float - 提供了 H 选项，禁止浮动体浮动（除非必要，不建议这么干）</li>
 <li>placeins - 提供了 命令，限制浮动体浮动范围</li>
 </ul></li>
@@ -483,7 +483,8 @@
 <li>nag - 检查你是否使用了过时的宏包和命令的宏包</li>
 <li>etoolbox - 主要是针对宏包和文档类开发者，不过提供了一些对环境的钩子，有时候很有用</li>
 <li>xpatch - 修补命令用的</li>
-<li>environ - 增强了 LaTeX 本来的 的功能，解决了一些花括号不匹配导致的问题</li>
+<li>environ - 增强了 LaTeX 本来的
+的功能，解决了一些花括号不匹配导致的问题</li>
 <li>fontawesome - 提供一些社交网站等网络世界常用的图标, 比如dropbox/facebook等.</li>
 </ul></li>
 <li>宏包替换</li>
@@ -495,7 +496,7 @@
 <li>画图用 TikZ + Asymptote 分工，代替 MetaPost、PSTricks 和 xfig等等其他所有绘图包</li>
 </ul>
 <h1 id="参考">参考</h1>
-<ol start="7" style="list-style-type: decimal">
+<ol start="7" type="1">
 <li>关于目录的页码涉及的宏包: fancyhdr, titlesec, tocloft</li>
 <li>input需要指定后缀, include貌似不需要. 至少对于.tex文件如此.<br>
 </li>
@@ -528,13 +529,13 @@
       
         <div class="post-tags">
           
-            <a href="/tags/updating/" rel="tag"># updating</a>
-          
-            <a href="/tags/package/" rel="tag"># package</a>
-          
             <a href="/tags/tex/" rel="tag"># tex</a>
           
             <a href="/tags/tips/" rel="tag"># tips</a>
+          
+            <a href="/tags/package/" rel="tag"># package</a>
+          
+            <a href="/tags/updating/" rel="tag"># updating</a>
           
         </div>
       
