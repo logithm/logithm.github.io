@@ -3,19 +3,30 @@ title: todo
 date: 2018-03-16 12:33:18
 type: "todo"
 ---
+[TOC]
 
-# simiki
+## to do
+1. (18-03-19) pandoc 的模板慢慢调
 
-https://tracholar.github.io/wiki/web/simiki.html
+1. (18-03-19)参考[tankywoo - Kindle](https://wiki.tankywoo.com/other/kindle.html), [lord63 - kindle](http://wiki.lord63.com/other/kindle.html),
+要做以下几件事情: 
+    * 已读书目列表同步到哪里, 怎么同步.
+    * Clippings.io 读书笔记的处理
+    * 
+1. (18-03-19) simiki的markdown渲染是python? 能否修改成其他? 标准markdown语法? 能否做点修改扩展?
 
-https://tracholar.github.io/wiki/
+1. css+html+javascript
 
-https://sthsf.github.io/wiki/
+1. cmder与Chocolatey: chorolatey是Windows下的apt-get.
 
-https://wiki.tankywoo.com/
+## to read
 
+1. [http://blog.meekdai.com/](http://blog.meekdai.com/)
+1. [http://lepture.com/](http://lepture.com/)
+1. [http://jiangtanghu.com/cn/](http://jiangtanghu.com/cn/)
+1. [https://macplay.github.io/](https://macplay.github.io/)
 
-# blog todo
+## blog todo
 
 1. [blog html5 slides](http://www.lancezhange.com/2015/11/24/iframe-for-presentation-embedding/)
 [嵌入html5,用js](http://www.lancezhange.com/2015/11/23/jmpress-js-in-hexo/)
@@ -32,7 +43,7 @@ https://wiki.tankywoo.com/
 
 
 
-# wiki
+## wiki
 
 1. [基于nodejs的wiki---jingo](https://github.com/claudioc/jingo)
 
@@ -42,18 +53,33 @@ https://wiki.tankywoo.com/
 
 1. [http://prose.io](http://prose.io)
 
+### simiki
+
+https://tracholar.github.io/wiki/web/simiki.html
+
+https://tracholar.github.io/wiki/
+
+https://sthsf.github.io/wiki/
+
+https://wiki.tankywoo.com/
 
 
-# maths todo
+
+## done 
+
+1. simiki的插图等事宜, 参见[simiki的文档](http://simiki.org/zh-docs/configuration.html)中的attach关键词. 插图语法: `![](../attach/xxx.png)`, 本地远程皆正常. 
+
+
+## maths todo
 from github(mymd/mymaths)
 
-## 问题征解
+### 问题征解
 1. $P$是空间固定点, 过$P$的平面与三轴交点分别为$A,B,C$.   
 问: 当$\triangle{ABC}$的面积最小时, 周长最小时, 四面体$O-ABC$的体积最小时, 表面积最小时, 
 点$P$在$\triangle{ABC}$的什么位置? 或者是什么心? [链接](http://kuing.orzweb.net/viewthread.php?tid=4135&extra=page%3D1)
 
 
-## todo
+### todo
 1. [虚拟对称轴法](http://kuing.orzweb.net/viewthread.php?tid=4093&rpid=17937&ordertype=0&page=1#pid17937)  
 	<img src="../../../images/m1.png"  alt="图片名称"  style="zoom:80%"/>  
 	<div align = center><img src="../../../images/m1.png"/></div>
