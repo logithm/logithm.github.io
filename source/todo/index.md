@@ -3,7 +3,7 @@ title: todo
 date: 2018-03-16 12:33:18
 type: "todo"
 ---
-[TOC]
+
 
 ## to do
 1. (18-03-19) pandoc 的模板慢慢调
@@ -39,7 +39,6 @@ type: "todo"
 
 1. [grav:建blog工具](https://getgrav.org/): 不要用, 可能需要自己搭建php服务器. [理由](https://blog.jamespan.me/posts/blogging-in-non-static-way)
 
-1. [typecho: blog平台](http://typecho.org/)
 
 
 
@@ -68,6 +67,8 @@ https://wiki.tankywoo.com/
 ## done 
 
 1. simiki的插图等事宜, 参见[simiki的文档](http://simiki.org/zh-docs/configuration.html)中的attach关键词. 插图语法: `![](../attach/xxx.png)`, 本地远程皆正常. 
+
+1. [typecho: blog平台](http://typecho.org/). 去折腾这些平台其实没有多大必要, 并且有了hexo已经够好的了, 重要的是内容. (20180327)
 
 
 ## maths todo
