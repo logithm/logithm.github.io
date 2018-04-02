@@ -17,7 +17,11 @@ type: "todo"
 
 1. css+html+javascript
 
-1. cmder与Chocolatey: chorolatey是Windows下的apt-get.
+1. cmder与Chocolatey: chocolatey是Windows下的apt-get.
+
+1. css一个学习网站: https://github.com/atomiks/30-seconds-of-css, https://atomiks.github.io/30-seconds-of-css/
+
+1. [markdown到pdf的脚本](https://zhuanlan.zhihu.com/p/31982147), 这个可以优先解决. 
 
 ## to read
 
