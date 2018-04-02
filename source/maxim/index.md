@@ -22,5 +22,11 @@ type: "maxim"
 
 * 极致的幸福，存在于孤独的深海。在这样日复一日的生活里，我逐渐和自己达成和解。--- [yongyuan](https://yongyuan.name/blog/) 2018-03-13
 
-* 老骥伏枥, 志在千里. 年龄是横亘在灵肉之间的鸿沟. 2018-03-22
+* 老骥伏枥, 志在千里. 年龄是横亘在灵肉之间的鸿沟. --- 2018-03-22
 
+* Lolita, light of my life, fire of my loins. My sin, my soul. Lo-lee-ta: the tip of the tongue taking a trip of three steps down the palate to tap, 
+at three, on the teeth. Lo. Lee. Ta. --- 2018-04-02
+
+* 忠厚老实的人的恶毒, 就像饭里的沙砾或者出骨鱼片里未净的刺, 给人一种不期待的痛。——钱钟书《围城》 --- 2018-04-02
+
+* 
