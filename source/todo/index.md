@@ -23,6 +23,8 @@ type: "todo"
 
 1. [markdown到pdf的脚本](https://zhuanlan.zhihu.com/p/31982147), 这个可以优先解决. 
 
+1. wox 与 everything 的搭配使用
+
 ## to read
 
 1. [http://blog.meekdai.com/](http://blog.meekdai.com/)
