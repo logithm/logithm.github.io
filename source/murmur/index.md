@@ -5,7 +5,7 @@ type: "maxim"
 toc: true
 ---
 
-2018年2月
+## 2018年2月
 
 * 愚公移山是宣传家们给屌丝编织的关于希望的梦.
 * 愚公移不了山, 精卫填不了海. 以 *刑天舞干戚, 猛志固常在* 作为不甘心的注脚. --- 2018-02-19  
@@ -18,6 +18,7 @@ toc: true
 
 * 知识不能碎片化，要结构化. --- [Zthxxx](https://wiki.zthxxx.me/wiki/index/) 2018-02-27
 
+## 2018年3月
 * Rules are made to be broken, 友情是用来背叛的. 按照这个句式可以造很多句子. 2018-03-13
 
 * 人生天地之间，若白驹之过隙，忽然而已。--- [Lijia Yu](http://yulijia.net/) 2018-03-13
@@ -25,6 +26,9 @@ toc: true
 * 极致的幸福，存在于孤独的深海。在这样日复一日的生活里，我逐渐和自己达成和解。--- [yongyuan](https://yongyuan.name/blog/) 2018-03-13
 
 * 老骥伏枥, 志在千里. 年龄是横亘在灵肉之间的鸿沟. --- 2018-03-22
+
+
+## 2018年4月
 
 * Lolita, light of my life, fire of my loins. My sin, my soul. Lo-lee-ta: the tip of the tongue taking a trip of three steps down the palate to tap, 
 at three, on the teeth. Lo. Lee. Ta. --- 2018-04-02
@@ -56,3 +60,5 @@ ps: 这些东西也可以说是话术.
 眼里没有柴米油盐? 不仅仅有云淡风轻? --- 2018-04-06
 
 * 宝宝只是你向世界妥协的借口, 实际的理由是只能默默承受了. --- 2018-04-08
+
+* 定义的作用之一是消歧义, 这是定义的本质作用之一. 所以对于定义而言, 务必准确精确. --- 2018-04-14

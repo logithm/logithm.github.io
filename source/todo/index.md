@@ -2,6 +2,7 @@
 title: todo
 date: 2018-03-16 12:33:18
 type: "todo"
+mathjax: true
 ---
 
 
@@ -32,7 +33,7 @@ type: "todo"
 1. [http://jiangtanghu.com/cn/](http://jiangtanghu.com/cn/)
 1. [https://macplay.github.io/](https://macplay.github.io/)
 
-## blog todo
+##  todo hexoblog
 
 1. [blog html5 slides](http://www.lancezhange.com/2015/11/24/iframe-for-presentation-embedding/)
 [嵌入html5,用js](http://www.lancezhange.com/2015/11/23/jmpress-js-in-hexo/)
@@ -48,7 +49,7 @@ type: "todo"
 
 
 
-## wiki
+## todo wiki
 
 1. [基于nodejs的wiki---jingo](https://github.com/claudioc/jingo)
 
@@ -77,8 +78,14 @@ https://wiki.tankywoo.com/
 1. [typecho: blog平台](http://typecho.org/). 去折腾这些平台其实没有多大必要, 并且有了hexo已经够好的了, 重要的是内容. (20180327)
 
 
-## maths todo
+
+---------------------
+
+
+##  todo maths
 from github(mymd/mymaths)
+
+* 定义的作用是消歧义, 所以对于定义务必要精确.
 
 ### 问题征解
 1. $P$是空间固定点, 过$P$的平面与三轴交点分别为$A,B,C$.   
