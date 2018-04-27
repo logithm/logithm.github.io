@@ -26,6 +26,8 @@ mathjax: true
 
 1. wox 与 everything 的搭配使用
 
+1. [mathpix](https://www.mathpix.com/): 将图片格式的公式转换为latex公式. 目前打不开网站, 有ios app.
+
 ## to read
 
 1. [http://blog.meekdai.com/](http://blog.meekdai.com/)
