@@ -1,0 +1,11 @@
+{
+    "social": {
+        "weibo": "http://weibo.com/",
+        "github": "https://github.com/",
+		"rss": "/atom.xml"
+    },
+    "extern": {
+	    "G(mirror)": "https://ac.scmor.com/",
+		"Github": "https://github.com/"
+    }
+}

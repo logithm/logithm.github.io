@@ -3,7 +3,7 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 夏 虫
+title: 夏虫
 subtitle: 语冰
 description: 
 author: LOG
@@ -66,13 +66,19 @@ time_format: HH:mm:ss
 
 # Pagination
 ## Set per_page to 0 to disable pagination
-per_page: 30
-pagination_dir: page
+#per_page: 20
+#pagination_dir: page 这两行本来是next的设置, 现在换成raytaylorlin了, 根据作者的要求注释掉了.
+archive_generator:
+  per_page: 0
+tag_generator:
+  per_page: 0
+category_generator:
+  per_page: 0
 
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: next
+theme: raytaylorism
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
