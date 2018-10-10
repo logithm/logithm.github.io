@@ -5,25 +5,32 @@ type: "about"
 ---
 
 # 关于about
+
 1. 说是about, 其实就是个说明. 
 1. 分类[隔三差五](../categories/隔三差五/)对应于**每日一题**. 由于每日一题之不可得, 那么就不得已而求其次, 故隔三差五.
 2. [memo](../murmur)与[絮语](https://logithm.github.io/wiki/mist/murmur.html).
 3. [个人wiki](http://logithm.github.io/wiki)是用simiki搭建的, 主要是因为在办公过程中, 总是遇到同样的问题, 做的备忘录.
 
 
+# links to backup & murmur
 
+1. [backup](../backup)
+2. [murmur](../murmur)
+3. [reading](../reading)
 
 # Todo
-+ [x] 把插图搞清楚. 关于图床部分因为注册需要手机.  
-+ [x] todo list.
-+ [ ] post的front-matter部分的description不能用冒号, 其实是冒号有重要作用.
-+ [ ] latex2html
-+ [ ] 
+
+- [x] 把插图搞清楚. 关于图床部分因为注册需要手机.  
+- [x] todo list.
+- [ ] post的front-matter部分的description不能用冒号, 其实是冒号有重要作用.
+- [ ] latex2html
+- [ ] 
 
 
 
 
 # Done
+
 1. [博客内部链接: pages之间的互相链接](https://qiwulun.github.io/posts/用Hexo和Org写博客──站内链接.html).   
 	* 首先, `_config.yml`中, 将	
 	```permalink: :year/:month/:day/:title/```	
