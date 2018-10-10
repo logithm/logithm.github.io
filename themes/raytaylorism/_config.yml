@@ -20,12 +20,12 @@ menu:
   - id: backup
     link: /backup
     icon: kiss
-    class: menu-backup
+    class: menu-about
   # murmur
   - id: murmur
     link: /murmur
     icon: smile
-    class: menu-murmur
+    class: menu-about
   # 读书
 #  - id: reading
 #    link: /reading
