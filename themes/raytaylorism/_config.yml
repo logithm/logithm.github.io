@@ -16,6 +16,16 @@ menu:
     category: true
     icon: bookmark
     class: menu-category
+  # backup
+  - id: backup
+    link: /backup
+    icon: kiss
+    class: menu-backup
+  # murmur
+  - id: murmur
+    link: /murmur
+    icon: smile
+    class: menu-murmur
   # 读书
 #  - id: reading
 #    link: /reading
