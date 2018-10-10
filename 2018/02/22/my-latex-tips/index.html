@@ -248,11 +248,11 @@
             
     <div class="tags-row">
         
-            <a href="/tags/updating/" class="chip pink lighten-1">updating</a>
-        
             <a href="/tags/tex/" class="chip pink lighten-1">tex</a>
         
             <a href="/tags/package/" class="chip pink lighten-1">package</a>
+        
+            <a href="/tags/updating/" class="chip pink lighten-1">updating</a>
         
             <a href="/tags/tips/" class="chip pink lighten-1">tips</a>
         
@@ -291,14 +291,16 @@
 </ol>
 <h1 id="各种宏包">各种宏包</h1>
 <h2 id="enumitem">enumitem</h2>
+<p>列表宏包: enumerate, enumitem, paralist. 其中enumitem是enumerate的加强版, 可定制的更多.</p>
 <ol type="1">
 <li><p><a href="https://github.com/CTeX-org/ctex-kit/issues/209" target="_blank" rel="noopener">ctex宏包的</a><br>
-<code>\begin{enumerate}[label = \chinese* ]</code> 报错的解决方案:<br>
+<code>\begin{enumerate}[label = \chinese* ]</code><br>
+报错的解决方案:<br>
 <code>\AddEnumerateCounter{\chinese}{\chinese}{\quad}</code></p></li>
 <li><p><a href="http://bbs.ctex.org/forum.php?mod=viewthread&amp;tid=74847" target="_blank" rel="noopener">如何才能让enumitem的各级标题随着level改变大小</a> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">\setlist[enum, 1]&#123;label*=\arabic*., listparindent=21pt, font=\bfseries\tiny, before*=\erhao &#125;</span><br><span class="line">\setlist[enum, 2]&#123;label*=\arabic*., listparindent=21pt, font=\bfseries\tiny, before*=\sihao &#125;</span><br><span class="line">\setlist[enum, 3]&#123;label*=\arabic*., listparindent=21pt, font=\bfseries\tiny, before*=\wuhao &#125;</span><br></pre></td></tr></table></figure></p></li>
 <li><p>编号黑体化<br>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\begin&#123;enumerate&#125;[font=\textbf]</span><br></pre></td></tr></table></figure></p></li>
-<li><p>列表宏包: enumerate, enumitem, paralist</p></li>
+<li><p>.</p></li>
 </ol>
 <h2 id="关于hyperref宏包">关于hyperref宏包</h2>
 <ol type="1">
