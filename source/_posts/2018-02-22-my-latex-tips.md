@@ -64,8 +64,11 @@ W: E:\yaodoc\desktop\texmtest\main01.tex:0 Size substitutions with differences(F
 
 # 各种宏包
 ## enumitem
+列表宏包: enumerate, enumitem, paralist. 其中enumitem是enumerate的加强版, 可定制的更多.
+
 1. [ctex宏包的\chinese与enumitem宏包](https://github.com/CTeX-org/ctex-kit/issues/209)  
-`\begin{enumerate}[label = \chinese* ]` 报错的解决方案:   
+`\begin{enumerate}[label = \chinese* ]`  
+报错的解决方案:   
 `\AddEnumerateCounter{\chinese}{\chinese}{\quad}`
 
 2. [如何才能让enumitem的各级标题随着level改变大小](http://bbs.ctex.org/forum.php?mod=viewthread&tid=74847)
@@ -79,7 +82,7 @@ W: E:\yaodoc\desktop\texmtest\main01.tex:0 Size substitutions with differences(F
 	\begin{enumerate}[font=\textbf]
 ```
 
-4. 列表宏包: enumerate, enumitem, paralist
+4. \before实现列表头与主体某种字体设置. 
 
 
 ## 关于hyperref宏包
