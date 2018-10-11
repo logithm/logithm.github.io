@@ -10,16 +10,14 @@
     <title>todo | 语冰</title>
     <meta name="author" content="LOG">
     
-    <meta name="description" content="to do
+    <meta name="description" content="Done
 
-(18-03-19) pandoc 的模板慢慢调
-(18-03-19)参考tankywoo - Kindle, lord63 - kindle, 要做以下几件事情:
+博客内部链接: pages之间的互相链接.
 
-已读书目列表同步到哪里, 怎么同步.
-Clippings.io 读书笔记的处理
+首先, _config.yml中, 将 permalink: :year/:month/:day/:title/
+修改为 permalink: _post/:title.html.
 
-
-(18-03-1">
+其次, 比如要在about页面上链接maxi">
     
     
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -237,12 +235,35 @@ Clippings.io 读书笔记的处理
             
 
             <div class="toc pink-link-context hide-on-med-and-down">
-    <ol class="section table-of-contents"><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#to-do"><span class="section table-of-contents-text">to do</span></a></li><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#to-read"><span class="section table-of-contents-text">to read</span></a></li><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#todo-hexoblog"><span class="section table-of-contents-text">todo hexoblog</span></a></li><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#todo-wiki"><span class="section table-of-contents-text">todo wiki</span></a><ol class="section table-of-contents-child"><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#simiki"><span class="section table-of-contents-text">simiki</span></a></li></ol></li><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#done"><span class="section table-of-contents-text">done</span></a></li><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#todo-maths"><span class="section table-of-contents-text">todo maths</span></a><ol class="section table-of-contents-child"><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#问题征解"><span class="section table-of-contents-text">问题征解</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#todo"><span class="section table-of-contents-text">todo</span></a></li></ol></li></ol>
+    <ol class="section table-of-contents"><li class="section table-of-contents-item section table-of-contents-level-1"><a class="section table-of-contents-link" href="#done"><span class="section table-of-contents-text">Done</span></a></li><li class="section table-of-contents-item section table-of-contents-level-1"><a class="section table-of-contents-link" href="#todo"><span class="section table-of-contents-text">Todo</span></a><ol class="section table-of-contents-child"><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#to-do"><span class="section table-of-contents-text">to do</span></a></li><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#to-read"><span class="section table-of-contents-text">to read</span></a></li><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#todo-hexoblog"><span class="section table-of-contents-text">todo hexoblog</span></a></li><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#todo-wiki"><span class="section table-of-contents-text">todo wiki</span></a><ol class="section table-of-contents-child"><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#simiki"><span class="section table-of-contents-text">simiki</span></a></li></ol></li><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#done-1"><span class="section table-of-contents-text">done</span></a></li><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#todo-maths"><span class="section table-of-contents-text">todo maths</span></a><ol class="section table-of-contents-child"><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#问题征解"><span class="section table-of-contents-text">问题征解</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#todo-1"><span class="section table-of-contents-text">todo</span></a></li></ol></li></ol></li></ol>
 </div>
 
 
             <div class="entry pink-link-context">
-                <h2 id="to-do">to do</h2>
+                <h1 id="done">Done</h1>
+<ol type="1">
+<li><a href="https://qiwulun.github.io/posts/用Hexo和Org写博客──站内链接.html" target="_blank" rel="noopener">博客内部链接: pages之间的互相链接</a>.
+<ul>
+<li>首先, <code>_config.yml</code>中, 将 <code>permalink: :year/:month/:day/:title/</code><br>
+修改为 <code>permalink: _post/:title.html</code>.<br>
+</li>
+<li>其次, 比如要在<code>about</code>页面上链接<code>maxim</code>页面, 只要 <code>[maxim](../maxim)</code>即可. 注意是两个<code>..</code>, 也不需要加<code>.html</code>后缀. 另外, <code>[隔三差五](../categories/隔三差五/)</code>也是正确的.<br>
+</li>
+<li>再次, 博客内部某博文链接到另一博文: <code></code>, 其中<code>blog.md</code>就是那个目标博文的md文件.</li>
+</ul></li>
+<li>插图问题, 解决为 <code>![](../../../../images/001.png)</code> . 2018-02-16</li>
+<li>换行问题参见: <a href="/2018/02/15/hexo/" title="Hexo+Github Pages+Git之旅">Hexo+Github Pages+Git之旅</a></li>
+</ol>
+<h1 id="todo">Todo</h1>
+<ul>
+<li>[x] 把插图搞清楚. 关于图床部分因为注册需要手机.<br>
+</li>
+<li>[x] todo list.</li>
+<li>[ ] post的front-matter部分的description不能用冒号, 其实是冒号有重要作用.</li>
+<li>[ ] latex2html</li>
+<li>[ ]</li>
+</ul>
+<h2 id="to-do">to do</h2>
 <ol type="1">
 <li><p>(18-03-19) pandoc 的模板慢慢调</p></li>
 <li>(18-03-19)参考<a href="https://wiki.tankywoo.com/other/kindle.html" target="_blank" rel="noopener">tankywoo - Kindle</a>, <a href="http://wiki.lord63.com/other/kindle.html" target="_blank" rel="noopener">lord63 - kindle</a>, 要做以下几件事情:
@@ -286,7 +307,7 @@ Clippings.io 读书笔记的处理
 <p>https://tracholar.github.io/wiki/</p>
 <p>https://sthsf.github.io/wiki/</p>
 <p>https://wiki.tankywoo.com/</p>
-<h2 id="done">done</h2>
+<h2 id="done-1">done</h2>
 <ol type="1">
 <li><p>simiki的插图等事宜, 参见<a href="http://simiki.org/zh-docs/configuration.html" target="_blank" rel="noopener">simiki的文档</a>中的attach关键词. 插图语法: <code>![](../attach/xxx.png)</code>, 本地远程皆正常.</p></li>
 <li><p><a href="http://typecho.org/" target="_blank" rel="noopener">typecho: blog平台</a>. 去折腾这些平台其实没有多大必要, 并且有了hexo已经够好的了, 重要的是内容. (20180327)</p></li>
@@ -302,7 +323,7 @@ Clippings.io 读书笔记的处理
 <li><span class="math inline">\(P\)</span>是空间固定点, 过<span class="math inline">\(P\)</span>的平面与三轴交点分别为<span class="math inline">\(A,B,C\)</span>.<br>
 问: 当<span class="math inline">\(\triangle{ABC}\)</span>的面积最小时, 周长最小时, 四面体<span class="math inline">\(O-ABC\)</span>的体积最小时, 表面积最小时, 点<span class="math inline">\(P\)</span>在<span class="math inline">\(\triangle{ABC}\)</span>的什么位置? 或者是什么心? <a href="http://kuing.orzweb.net/viewthread.php?tid=4135&amp;extra=page%3D1" target="_blank" rel="noopener">链接</a></li>
 </ol>
-<h3 id="todo">todo</h3>
+<h3 id="todo-1">todo</h3>
 <ol type="1">
 <li><a href="http://kuing.orzweb.net/viewthread.php?tid=4093&amp;rpid=17937&amp;ordertype=0&amp;page=1#pid17937" target="_blank" rel="noopener">虚拟对称轴法</a><br>
 <img src="../../../images/m1.png" alt="图片名称" style="zoom:80%"><br>
