@@ -1,44 +1,38 @@
 {
     "define": {
-	    "readed": "已读",
+        "readed": "已读",
         "reading": "在读",
         "wanted": "想读"
     },
     "contents": {
         "readed": [{
-            "title": "众妙之门：网站UI设计之道",
-            "cover": "http://img3.douban.com/lpic/s23139051.jpg",
-            "review": "推荐非UI人士了解UI阅读。",
-            "score": "7",
-            "doubanLink": "http://book.douban.com/subject/20281463/"
+            "title": "至味在人间",
+            "cover": "https://img3.doubanio.com/view/subject/l/public/s28363876.jpg",
+            "review": "不推荐",
+            "score": "7.9",
+            "doubanLink": "https://book.douban.com/subject/26687647/"
         }, {
-            "title": "JavaScript模式",
-            "cover": "http://img5.douban.com/lpic/s11337059.jpg",
-            "review": "书很薄，但内容相当实用。",
-            "score": "8.5",
-            "doubanLink": "http://book.douban.com/subject/11506062/"
-        }, {
-            "title": "JavaScript语言精粹",
-            "cover": "http://img3.douban.com/lpic/s11373174.jpg",
-            "review": "这是一本前端人员的基础书，强烈推荐阅读，而且越早看受益越多！",
-            "score": "9.5",
-            "doubanLink": "http://book.douban.com/subject/11874748/"
+            "title": "唐宋名家词选",
+            "cover": "https://img3.doubanio.com/view/subject/l/public/s4062991.jpg",
+            "review": "龙先生是大家",
+            "score": "9.4",
+            "doubanLink": "https://book.douban.com/subject/1545936/"
         }],
-		
-		"reading": [{
-            "title": "网络游戏核心技术与实战",
-            "cover": "http://img4.douban.com/lpic/s27881888.jpg",
-            "review": "",
-            "score": null,
-            "doubanLink": "http://book.douban.com/subject/25850090/"
+        
+        "reading": [{
+            "title": "青春",
+            "cover": "https://img1.doubanio.com/view/subject/l/public/s4563627.jpg",
+            "review": "博文集合而已",
+            "score": 8.3,
+            "doubanLink": "https://book.douban.com/subject/5290564/"
         }],
 
         "wanted": [{
-            "title": "计算机程序的构造和解释",
-            "cover": "http://img4.douban.com/lpic/s1113106.jpg",
-            "review": "",
-            "score": null,
-            "doubanLink": "http://book.douban.com/subject/1148282/"
+            "title": "近代欧氏几何学",
+            "cover": "https://img1.doubanio.com/view/subject/l/public/s2863399.jpg",
+            "review": "应该很好",
+            "score": 9.3,
+            "doubanLink": "https://book.douban.com/subject/1551510/"
         }]
     }
 }
