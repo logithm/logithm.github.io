@@ -6,6 +6,7 @@ mathjax: true
 ---
 
 
+
 # Done
 
 1. [博客内部链接: pages之间的互相链接](https://qiwulun.github.io/posts/用Hexo和Org写博客──站内链接.html).   
@@ -18,6 +19,10 @@ mathjax: true
     * 再次, 博客内部某博文链接到另一博文: `{% post_link blog.md %}`, 其中`blog.md`就是那个目标博文的md文件.
 2. 插图问题, 解决为 `![](../../../../images/001.png)` . 2018-02-16
 3. 换行问题参见: {% post_link hexo %}
+
+1. simiki的插图等事宜, 参见[simiki的文档](http://simiki.org/zh-docs/configuration.html)中的attach关键词. 插图语法: `![](../attach/xxx.png)`, 本地远程皆正常. 
+
+1. [typecho: blog平台](http://typecho.org/). 去折腾这些平台其实没有多大必要, 并且有了hexo已经够好的了, 重要的是内容. (20180327)
 
 
 # Todo
@@ -58,7 +63,7 @@ mathjax: true
 1. [http://jiangtanghu.com/cn/](http://jiangtanghu.com/cn/)
 1. [https://macplay.github.io/](https://macplay.github.io/)
 
-##  todo hexoblog
+##  to hexoblog
 
 1. [blog html5 slides](http://www.lancezhange.com/2015/11/24/iframe-for-presentation-embedding/)
 [嵌入html5,用js](http://www.lancezhange.com/2015/11/23/jmpress-js-in-hexo/)
@@ -74,7 +79,7 @@ mathjax: true
 
 
 
-## todo wiki
+## to wiki
 
 1. [基于nodejs的wiki---jingo](https://github.com/claudioc/jingo)
 
@@ -96,29 +101,17 @@ https://wiki.tankywoo.com/
 
 
 
-## done 
-
-1. simiki的插图等事宜, 参见[simiki的文档](http://simiki.org/zh-docs/configuration.html)中的attach关键词. 插图语法: `![](../attach/xxx.png)`, 本地远程皆正常. 
-
-1. [typecho: blog平台](http://typecho.org/). 去折腾这些平台其实没有多大必要, 并且有了hexo已经够好的了, 重要的是内容. (20180327)
-
 
 
 ---------------------
 
 
 ##  todo maths
-from github(mymd/mymaths)
 
-* 定义的作用是消歧义, 所以对于定义务必要精确.
-
-### 问题征解
 1. $P$是空间固定点, 过$P$的平面与三轴交点分别为$A,B,C$.   
 问: 当$\triangle{ABC}$的面积最小时, 周长最小时, 四面体$O-ABC$的体积最小时, 表面积最小时, 
 点$P$在$\triangle{ABC}$的什么位置? 或者是什么心? [链接](http://kuing.orzweb.net/viewthread.php?tid=4135&extra=page%3D1)
 
-
-### todo
 1. [虚拟对称轴法](http://kuing.orzweb.net/viewthread.php?tid=4093&rpid=17937&ordertype=0&page=1#pid17937)  
 	<img src="../../../images/m1.png"  alt="图片名称"  style="zoom:80%"/>  
 	<div align = center><img src="../../../images/m1.png"/></div>
