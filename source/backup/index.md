@@ -10,11 +10,6 @@ type: "backup"
 1. tkc7200的集成显卡, 从[右键中去掉相应的选项](http://tieba.baidu.com/p/2993389525): `regsvr32 /u igfxdtcm.dll`. (20180316)
 
 
-
-
-
-
-
 # temp
 1. [实时监测文件的变化(livereload)](http://www.hahack.com/codes/livereload-for-hexo/)
 * `$ npm install hexo-livereload --save`
@@ -22,24 +17,13 @@ type: "backup"
 
 	ps: 没成功.
 
-1. [hexo-toc](https://github.com/bubkoo/hexo-toc)可行
 
-1. freemind主题修改post的标题大小在 `themes\freemind\source\css\style.ss`中
-
-1. 今天比较兴奋的是通过wixo/freemind这两个主题, 发现几个好玩的博客. 2018-02-27
 
 1. 人生能有几回搏啊, 自己喜欢的事情是做些文字工作, 比如coding, 要是早点能发现自己的喜好并且能为之一直投入的话, 是多么幸福的事情. 2018-02-27
 
-1. 
 
 
 # 备忘录 
-from github(mymd/memo)
-
-
-
-
-3. [反复引用同一个脚注](http://bbs.ctex.org/forum.php?mod=viewthread&tid=65541)
 
 4. [通过css弄一个按钮](https://segmentfault.com/q/1010000003846721)
 
@@ -62,63 +46,6 @@ body {
 ```
 8. markdown, wiki, 可以在latex中直接使用, 已经有相应的宏包了. 可能需要pdflatex. (latexstudio中的莲枝)
 
-9. [wrapfig宏包可以实现左右排版](1-1.tex): 但是不能与列表环境互相嵌入.
-``` latex
-\begin{wrapfigure}[12]{r}[34pt]{5cm}
-\begin{tikzpicture}
-....
-\end{tikzpicture}
-\end{wrapfigure}
-``` 
-
-10. [zhlipsum 随机填充汉字](https://github.com/Stone-Zeng/zhlipsum)
-
-11. tikzlog-1405.pdf: xyz轴指向的自定义(P18)
-```latex
-\begin{tikzpicture}[x={(-.1cm,-.15cm)},y={(1cm,0cm)},z={(0cm,1cm)}]
-\draw[->] (-5,0,0) -- (5,0,0) node[below] {$x$};
-\draw[->] (0,-2,0) -- (0,2,0) node[right] {$y$};
-\draw[->] (0,0,-1) -- (0,0,3) node[above] {$z$};
-\draw[color=red] plot[domain=0:2*pi] ({sin(\x r)},{cos(\x r)},2);
-\draw[color=red] (0,0,0) -- (0,1,2) (0,0,0) -- (0,-1,2);
-\end{tikzpicture}
-```
-12. [跨页表格/代码框](http://www.latexstudio.net/archives/10645) 还不错的book类
-
-13. [开源微积分巨著《APEX Calculus》](http://www.latexstudio.net/archives/10627) [latex排版](https://github.com/APEXCalculus/APEXCalculus_Source)
-
-14. ---[st3](https://9iphp.com/web/html/sublime-text-3-license-key.html)---
-```
-—– BEGIN LICENSE —–
-Morin
-2 User License
-EA7E-924018
-184B9FDB 02612F57 33B15E69 BBC567F1
-E20FA231 C077EA95 CC14B48B 71DD2536
-E209843A 94D13692 03AC2FAA 895B688D
-B8F4A0E6 FDC15964 A5573FD7 6405ED1E
-6F205469 7F34C69D 3D36E475 52AF6A5B
-DFD15C31 85BA64EF F95DD592 4B42C314
-AC655762 C0F0F5A1 018824E4 17C56E16
-AC5AA84C 034F7A53 2C9A801B 8AED239F
-—— END LICENSE ——
-```
-1. st3 code
-```
-—– BEGIN LICENSE —–
-TwitterInc
-200 User License
-EA7E-890007
-1D77F72E 390CDD93 4DCBA022 FAF60790
-61AA12C0 A37081C5 D0316412 4584D136
-94D7F7D4 95BC8C1C 527DA828 560BB037
-D1EDDD8C AE7B379F 50C9D69D B35179EF
-2FE898C4 8E4277A8 555CE714 E1FB0E43
-D5D52613 C3D12E98 BC49967F 7652EED2
-9D2D2E61 67610860 6D338B72 5CF95C69
-E36B85CC 84991F19 7575D828 470A92AB
-—— END LICENSE ——
-```
 
 
 
@@ -155,17 +82,6 @@ for /f "skip=9 tokens=1,2 delims=:" %i in ('netsh wlan show profiles') do  @echo
 
 
 
-# geogebra使用备注
-from github(gitme)
-
-1. 手工画图, 然后导出pgf/tikz, 再放到standalone.tex中生成pdf插入.tex中去:
-	1. 把坐标系放大, 正常情况下$4\times 4$正好; 
-	1. 图画好后, 将图放在第一象限, 最好贴着坐标轴, 理由在下一步;
-	2. 在导出pgf/tizk代码时, 在对话框中填入$x_{\min},y_{\min}, x_{\max},y_{\max}$, 生成pgf/tikz代码; 
-	3. documentclass选择为standalone, 拷贝代码, xelatex生成pdf.
-![](../../../images/geogebra001.png)
-
-2. 高级选项中的任何修改, 都要返回上级菜单, 选择"保存设置". 
 
 
 1. 新增文件, 写好文件, 然后上传. 只有上传是git的事情, 其他都不是.  
@@ -186,17 +102,6 @@ git push origin master
 
 4. [多个github帐号的SSH key切换](http://ju.outofmemory.cn/entry/16775)
 
-5. [用github Pages和Jekyll搭建blog](http://www.ruanyifeng.com/blog/2012/08/blogging_with_jekyll.html),
-[另一种教程](http://www.cnfeat.com/blog/2014/05/11/how-to-build-a-blog/),   
-
-[还有](https://www.ezlippi.com/blog/2015/03/github-pages-blog.html)  
-> 在该目录下手动创建如下文件和文件夹，最终形成这样的结构：  
-	*  _includes：默认的在模板中可以引用的文件的位置，后面会提到  
-	*  _layouts：默认的公共页面的位置，后面会提到  
-	*  _posts：博客文章默认的存放位置  
-	*  .gitignore：git将忽略这个文件中列出的匹配的文件或文件夹，不将这些纳入源码管理  
-	*  _config.yml：关于jekyll模板引擎的配置文件  
-	*  index.html：默认的主页  
 
 
 # 好玩的东西
@@ -208,7 +113,8 @@ F5刷新一次, 更新一次一句话.
 > 要把office的信任中心的设置修改下
 
 1. [duckduck搜索](https://duckduckgo.com/), 
-[猴油脚本: Douban Download Search（支持https）](https://greasyfork.org/zh-CN/scripts/21316-douban-download-search-%E6%94%AF%E6%8C%81https)的代码里面有关于duckduckgo示例.
+[猴油脚本: Douban Download Search（支持https）](https://greasyfork.org/zh-CN/scripts/21316-douban-download-search-%E6%94%AF%E6%8C%81https)的
+代码里面有关于duckduckgo示例.
 
 1. [鸠摩搜索(电子书)](https://www.jiumodiary.com/): 用来搜书.
 
@@ -224,7 +130,6 @@ F5刷新一次, 更新一次一句话.
 1. [Word中高效输入公式](https://zhuanlan.zhihu.com/p/27072646)
 > Word2013中自带的公式输入已经很好了, 部分兼容LaTex语法. 把默认的字体替换一下, 更数学.  
 
-
 1. [Windows下的高效工具](https://www.zhihu.com/question/22919326/answer/23499484)  
 	* --TeraCopy: 用于copy大量文件, 但是收费, 所以不要.--
 	* Chocolatey: Windows上的apt-get, 没试过.
@@ -233,24 +138,4 @@ F5刷新一次, 更新一次一句话.
 
 1. [Capslock+](http://cjkis.me/capslock+/): 一个加强 Capslock 键的功能，以提高效率的工具. [使用说明就只看这一个.](https://www.zhihu.com/question/22919326/answer/201183511)
 
-1. [FreeFileSync](https://sourceforge.net/projects/freefilesync/): 用于同步文件, 比如pc与u盘, 比如备份盘与工作盘. 记得Windows自家就有类似工具.
 
-1. 
---------------------
-
-1. [floatrow宏包](http://www.latexstudio.net/hulatex/package/float.htm), 使用实例参见[ab_preamble.tex](https://github.com/jermer/alg-book)  
-
-1. [setspace宏包少用](http://bbs.ctex.org/forum.php?mod=viewthread&tid=68537)  
-
-1. [epigraph宏包用来写章节头上的一句名人名言](http://www.cnblogs.com/Eufisky/p/3801317.html)
-
-1.  做个glossary(名词/术语索引)还是很有作用的. 使用实例参见[ab_preamble.tex](https://github.com/jermer/alg-book).  
-
-1. [ab_preamble.tex](https://github.com/jermer/alg-book)中的插图(一行多图)可以参考.  
-
--------------------
-1. [st3的一些设置](https://jdhao.github.io/2017/03/19/windows-sublime-usage-related-issue/): 好.
-
-1. [st3与markdown](https://jdhao.github.io/2017/03/04/Sublime-Windows-Markdown/)
-
-1. [hexo-next](https://jdhao.github.io/2017/02/26/hexo-install-use-issue/)

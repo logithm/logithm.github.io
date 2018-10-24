@@ -7,22 +7,8 @@ mathjax: true
 
 
 
-# Done
-
-1. [博客内部链接: pages之间的互相链接](https://qiwulun.github.io/posts/用Hexo和Org写博客──站内链接.html).   
-    * 首先, `_config.yml`中, 将 
-    ```permalink: :year/:month/:day/:title/```  
-    修改为 
-    ```permalink: _post/:title.html```.     
-    * 其次, 比如要在`about`页面上链接`maxim`页面, 只要 `[maxim](../maxim)`即可. 注意是两个`..`, 也不需要加`.html`后缀. 
-    另外, `[隔三差五](../categories/隔三差五/)`也是正确的.  
-    * 再次, 博客内部某博文链接到另一博文: `{% post_link blog.md %}`, 其中`blog.md`就是那个目标博文的md文件.
-2. 插图问题, 解决为 `![](../../../../images/001.png)` . 2018-02-16
-3. 换行问题参见: {% post_link hexo %}
-
 1. simiki的插图等事宜, 参见[simiki的文档](http://simiki.org/zh-docs/configuration.html)中的attach关键词. 插图语法: `![](../attach/xxx.png)`, 本地远程皆正常. 
 
-1. [typecho: blog平台](http://typecho.org/). 去折腾这些平台其实没有多大必要, 并且有了hexo已经够好的了, 重要的是内容. (20180327)
 
 
 # Todo
@@ -34,7 +20,6 @@ mathjax: true
 - [ ] 
 
 
-## to do
 1. (18-03-19) pandoc 的模板慢慢调
 
 1. (18-03-19)参考[tankywoo - Kindle](https://wiki.tankywoo.com/other/kindle.html), [lord63 - kindle](http://wiki.lord63.com/other/kindle.html),
@@ -56,6 +41,8 @@ mathjax: true
 
 1. [mathpix](https://www.mathpix.com/): 将图片格式的公式转换为latex公式. 目前打不开网站, 有ios app.
 
+1. [Latex中英文环境设置](https://www.ezlippi.com/blog/2015/08/latex-fonts-settings.html)
+
 ## to read
 
 1. [http://blog.meekdai.com/](http://blog.meekdai.com/)  
@@ -74,43 +61,29 @@ mathjax: true
 【作者简介】  
 詹姆斯•希尔顿（1900—1954），英国著名畅销书作家，出生于英国兰开夏郡，代表作有《消失的地平线》《万世师表》。詹姆斯20岁时即发表了自己的首部作品，小说《凯瑟琳她自己》。其父约翰•希尔顿，是当地一所教堂学校的校长，《万世师表》一书的创作灵感也正是来源于此。  
 
-1. d
+1. [云风的读书](https://blog.codingnow.com/aee/)
+    - 《[数学也荒唐](https://book.douban.com/subject/27117509/)》  
+    - 《[阿西莫夫的《基地》系列](http://www.douban.com/doulist/10316/)》  
+    - 《[从一到无穷大](http://www.douban.com/subject/1102715/)》
+    - 《[什么是数学](http://www.douban.com/subject/1320282/) 》
+    - 《[论人类不平等的起源和基础](http://www.douban.com/subject/1099275/)》
+    - 《[相对论的意义](http://www.douban.com/subject/1324821)》
+    - 《[宇宙的琴弦](http://www.douban.com/subject/1045119/)》    
+    - 《[数学分析新讲](https://book.douban.com/subject/1130381/)》
+    - 《[科学精神的形成](http://www.douban.com/subject/1903131/)》
+    - 《[蚁迹寻踪及其他数学探索](http://www.douban.com/subject/1035596/)》
+    - 《[游戏——自然规律支配偶然性](http://www.douban.com/subject/1272283/)》
+1. [http://www.huangz.me](http://www.huangz.me/)
+    - [《曾国藩家书》笔记](http://note.huangz.me/introspection/zeng-guofan-home-letter/index.html)
 
-##  to hexoblog
+1. [演讲的力量](http://younghz.github.io/演讲的力量)
 
-1. [blog html5 slides](http://www.lancezhange.com/2015/11/24/iframe-for-presentation-embedding/)
-[嵌入html5,用js](http://www.lancezhange.com/2015/11/23/jmpress-js-in-hexo/)
+1. [应该这样表达你自己](http://younghz.github.io/看-应该这样表达你自己)
 
-1. [about mathjax](http://www.lancezhange.com/2015/05/18/Hello-Hexo-and-Goodbay-Octopress/)
+1. [精要主义](https://book.douban.com/subject/26761859/)
 
-1. [maupassant主题](https://www.haomwei.com/technology/maupassant-hexo.html)
+1. [你的灯亮着吗?](https://book.douban.com/subject/1135754/)
 
-1. [simple](http://isnowfy.github.io/): 在github上写博客的更简单的方式.
-
-1. [grav:建blog工具](https://getgrav.org/): 不要用, 可能需要自己搭建php服务器. [理由](https://blog.jamespan.me/posts/blogging-in-non-static-way)
-
-
-
-
-## to wiki
-
-1. [基于nodejs的wiki---jingo](https://github.com/claudioc/jingo)
-
-1. [TiddlyWiki5](https://github.com/Jermolene/TiddlyWiki5)
-
-1. [nodewiki](https://github.com/nhoss2/nodewiki)
-
-1. [http://prose.io](http://prose.io)
-
-### simiki
-
-https://tracholar.github.io/wiki/web/simiki.html
-
-https://tracholar.github.io/wiki/
-
-https://sthsf.github.io/wiki/
-
-https://wiki.tankywoo.com/
 
 
 
