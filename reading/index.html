@@ -204,19 +204,19 @@
                     
                         
                         <li class="tab col s4 ">
-                            <a class="pink-text " href="#readed">已读(2)</a>
+                            <a class="green-text " href="#readed">已读(2)</a>
                         </li>
                         
                     
                         
                         <li class="tab col s4 ">
-                            <a class="pink-text " href="#reading">在读(1)</a>
+                            <a class="green-text " href="#reading">在读(1)</a>
                         </li>
                         
                     
                         
                         <li class="tab col s4 ">
-                            <a class="pink-text " href="#wanted">想读(1)</a>
+                            <a class="green-text " href="#wanted">想读(1)</a>
                         </li>
                         
                     
@@ -232,7 +232,7 @@
                                 <div class="card-image waves-effect waves-block waves-light">
                                     <img class="card-cover-image activator" src="https://img3.doubanio.com/view/subject/l/public/s28363876.jpg">
                                 </div>
-                                <div class="card-content pink-link-context">
+                                <div class="card-content indigo-link-context">
                                     <span class="card-title truncate activator grey-text text-darken-4">至味在人间
                                     </span>
                                     <p>评分: 7.9
@@ -258,7 +258,7 @@
                                 <div class="card-image waves-effect waves-block waves-light">
                                     <img class="card-cover-image activator" src="https://img3.doubanio.com/view/subject/l/public/s4062991.jpg">
                                 </div>
-                                <div class="card-content pink-link-context">
+                                <div class="card-content indigo-link-context">
                                     <span class="card-title truncate activator grey-text text-darken-4">唐宋名家词选
                                     </span>
                                     <p>评分: 9.4
@@ -289,7 +289,7 @@
                                 <div class="card-image waves-effect waves-block waves-light">
                                     <img class="card-cover-image activator" src="https://img1.doubanio.com/view/subject/l/public/s4563627.jpg">
                                 </div>
-                                <div class="card-content pink-link-context">
+                                <div class="card-content indigo-link-context">
                                     <span class="card-title truncate activator grey-text text-darken-4">青春
                                     </span>
                                     <p>评分: 8.3
@@ -320,7 +320,7 @@
                                 <div class="card-image waves-effect waves-block waves-light">
                                     <img class="card-cover-image activator" src="https://img1.doubanio.com/view/subject/l/public/s2863399.jpg">
                                 </div>
-                                <div class="card-content pink-link-context">
+                                <div class="card-content indigo-link-context">
                                     <span class="card-title truncate activator grey-text text-darken-4">近代欧氏几何学
                                     </span>
                                     <p>评分: 9.3
@@ -353,12 +353,12 @@
 </div>
 
         <div class="fixed-action-btn float-sitemap">
-    <a class="btn-floating btn-large pink">
+    <a class="btn-floating btn-large green">
       <i class="fa fa-caret-square-o-up"></i>
     </a>
     <ul>
-      <li><a class="btn-return-top btn-floating waves-effect green" title="回到顶部"><i class="fa fa-arrow-circle-o-up"></i></a></li>
-      <li><a class="btn-floating waves-effect button-collapse yellow darken-1"  data-activates="main-menu" title="菜单"><i class="fa fa-navicon"></i></a></li>
+      <li><a class="btn-return-top btn-floating waves-effect blue" title="回到顶部"><i class="fa fa-arrow-circle-o-up"></i></a></li>
+      <li><a class="btn-floating waves-effect button-collapse orange"  data-activates="main-menu" title="菜单"><i class="fa fa-navicon"></i></a></li>
     </ul>
   </div>
 
@@ -416,7 +416,7 @@
     </div>
     
 
-    <div class="footer-copyright pink-link-context">
+    <div class="footer-copyright indigo-link-context">
         <div class="container">
             © 2018 All rights reserved.
             <p class="right" style="margin-top: 0;">本博客由 <a href="https://hexo.io">Hexo</a> 强力驱动 | 主题 <a href="https://github.com/raytaylorlin/hexo-theme-raytaylorism">raytaylorism</a></p>
@@ -513,7 +513,7 @@
             $('li.tab a').hover(function() {
                 $(this).toggleClass('text-lighten-4');
             });
-            $('.indicator').addClass('pink lighten-2');
+            $('.indicator').addClass('green lighten-2');
 
             
             // 添加new标签
@@ -592,7 +592,7 @@
                             if (isMatch) {
                                 keywords.forEach(function(keyword) {
                                     var regS = new RegExp(keyword, "gi");
-                                    data_title = data_title.replace(regS, "<span class=\"search-keyword pink lighten-2\">" + keyword + "</span>");
+                                    data_title = data_title.replace(regS, "<span class=\"search-keyword indigo lighten-2\">" + keyword + "</span>");
                                 });
 
                                 str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
@@ -614,7 +614,7 @@
                                     // highlight all keywords
                                     keywords.forEach(function(keyword) {
                                         var regS = new RegExp(keyword, "gi");
-                                        match_content = match_content.replace(regS, "<span class=\"search-keyword pink lighten-2\">" + keyword + "</span>");
+                                        match_content = match_content.replace(regS, "<span class=\"search-keyword indigo lighten-2\">" + keyword + "</span>");
                                     });
 
                                     str += "<p class=\"search-result\">..." + match_content + "...</p>"

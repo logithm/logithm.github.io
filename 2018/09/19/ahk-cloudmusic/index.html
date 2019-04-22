@@ -222,7 +222,7 @@
 
 
             </div>
-            <time class="pink-link-context" datetime="2018-09-19T00:09:22.000Z"><a href="/2018/09/19/ahk-cloudmusic/">2018-09-19</a></time>
+            <time class="indigo-link-context" datetime="2018-09-19T00:09:22.000Z"><a href="/2018/09/19/ahk-cloudmusic/">2018-09-19</a></time>
 
             <span id="busuanzi_container_page_pv" class="read-times-container">
     <i class="fa fa-eye"></i>
@@ -232,24 +232,24 @@
             
     <div class="tags-row">
         
-            <a href="/tags/ahk/" class="chip pink lighten-1">ahk</a>
+            <a href="/tags/ahk/" class="chip green accent-4">ahk</a>
         
     </div>
 
 
-            <div class="toc pink-link-context hide-on-med-and-down">
+            <div class="toc indigo-link-context hide-on-med-and-down">
     
 </div>
 
 
-            <div class="entry pink-link-context">
+            <div class="entry indigo-link-context">
                 <p>场景: 批改作业时, 左右手被占据, 左手可以偶尔切换. 这时候当然要戴上耳机, 把网易云音乐打开, 选好歌单开始播放. 常见的情形就是歌曲不合耳, 需要切换. 虽然键盘与鼠标都可以实现, 键盘自带的切歌键是全局的, 鼠标只能在网易云音乐的界面上切换. 理论上, 左手去按键盘并不那么麻烦, 但是由于作业铺在桌子上, 键盘往往被挤到一边或者被压到作业的底下. 而ppt翻页器(遥控笔)是教师这个职业的标配, 并且遥控笔的体积小, 那么用遥控笔来实现切歌就成为自然的想法. 问题是网易云音乐的全局快捷键只能设置成组合键, 遥控笔的按键对应的是左右或者上下或者翻页, 那么就需要其他方法来实现这样的目的.</p>
 <p>用ahk实现按遥控笔上的上下键触发实际的组合键ctrl+alt+pgup/pgdn, 脚本如下:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">PgUp::^!PgUp</span><br><span class="line">PgDn::^!PgDn</span><br><span class="line">return</span><br></pre></td></tr></table></figure>
 <p>注意点: 需要根据网易云音乐中的组合键设置相应的触发; 其二, 需要弄清楚遥控笔上的按键到底是什么.</p>
 
                 
-<p class="pink-link-context">
+<p class="indigo-link-context">
     <a href="/2018/09/19/diandian/" rel="next" title="looking for music for dd">
     上一篇：looking for music for dd
   </a>
@@ -257,7 +257,7 @@
 
 
 
-<p class="pink-link-context">
+<p class="indigo-link-context">
     <a href="/2018/03/26/complex-numbers-in-function/" rel="next" title="函数中不应该出现复数">
     下一篇：函数中不应该出现复数
   </a>
@@ -278,12 +278,12 @@
 </div>
 
         <div class="fixed-action-btn float-sitemap">
-    <a class="btn-floating btn-large pink">
+    <a class="btn-floating btn-large green">
       <i class="fa fa-caret-square-o-up"></i>
     </a>
     <ul>
-      <li><a class="btn-return-top btn-floating waves-effect green" title="回到顶部"><i class="fa fa-arrow-circle-o-up"></i></a></li>
-      <li><a class="btn-floating waves-effect button-collapse yellow darken-1"  data-activates="main-menu" title="菜单"><i class="fa fa-navicon"></i></a></li>
+      <li><a class="btn-return-top btn-floating waves-effect blue" title="回到顶部"><i class="fa fa-arrow-circle-o-up"></i></a></li>
+      <li><a class="btn-floating waves-effect button-collapse orange"  data-activates="main-menu" title="菜单"><i class="fa fa-navicon"></i></a></li>
     </ul>
   </div>
 
@@ -341,7 +341,7 @@
     </div>
     
 
-    <div class="footer-copyright pink-link-context">
+    <div class="footer-copyright indigo-link-context">
         <div class="container">
             © 2018 All rights reserved.
             <p class="right" style="margin-top: 0;">本博客由 <a href="https://hexo.io">Hexo</a> 强力驱动 | 主题 <a href="https://github.com/raytaylorlin/hexo-theme-raytaylorism">raytaylorism</a></p>
@@ -438,7 +438,7 @@
             $('li.tab a').hover(function() {
                 $(this).toggleClass('text-lighten-4');
             });
-            $('.indicator').addClass('pink lighten-2');
+            $('.indicator').addClass('green lighten-2');
 
             
             // 添加new标签
@@ -517,7 +517,7 @@
                             if (isMatch) {
                                 keywords.forEach(function(keyword) {
                                     var regS = new RegExp(keyword, "gi");
-                                    data_title = data_title.replace(regS, "<span class=\"search-keyword pink lighten-2\">" + keyword + "</span>");
+                                    data_title = data_title.replace(regS, "<span class=\"search-keyword indigo lighten-2\">" + keyword + "</span>");
                                 });
 
                                 str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
@@ -539,7 +539,7 @@
                                     // highlight all keywords
                                     keywords.forEach(function(keyword) {
                                         var regS = new RegExp(keyword, "gi");
-                                        match_content = match_content.replace(regS, "<span class=\"search-keyword pink lighten-2\">" + keyword + "</span>");
+                                        match_content = match_content.replace(regS, "<span class=\"search-keyword indigo lighten-2\">" + keyword + "</span>");
                                     });
 
                                     str += "<p class=\"search-result\">..." + match_content + "...</p>"
