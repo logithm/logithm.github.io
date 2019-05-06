@@ -43,23 +43,40 @@ menu:
 #    class: menu-search modal-trigger
 
 # 颜色配置
+# color:
+#   header: indigo
+#   footer: indigo
+#   page_nav: indigo
+#   side_nav: indigo darken-1
+#   tag: pink lighten-1
+#   article_title_link: indigo
+#   link: pink
+#   pagination: pink
+#   tab: pink
+#   archive_item: grey
+#   fab: pink
+#   fab_2: green
+#   fab_3: yellow darken-1
+#   new: pink
+#   about_header: indigo
+#   about_title: indigo
+
 color:
-  header: indigo
-  footer: indigo
-  page_nav: indigo
-  side_nav: indigo darken-1
-  tag: pink lighten-1
-  article_title_link: indigo
-  link: pink
-  pagination: pink
-  tab: pink
-  archive_item: grey
-  fab: pink
-  fab_2: green
-  fab_3: yellow darken-1
-  new: pink
-  about_header: indigo
-  about_title: indigo
+    header: indigo
+    footer: indigo
+    page_nav: indigo
+    side_nav: indigo darken-1
+    tag: green accent-4
+    link: indigo
+    pagination: green
+    tab: green
+    archive_item: grey
+    fab: green
+    fab_2: blue
+    fab_3: orange
+    new: pink
+    about_header: indigo
+    about_title: indigo
 
 archive_yearly: true
 
